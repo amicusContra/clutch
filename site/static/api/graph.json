@@ -1,6 +1,6 @@
 {
-  "_generated": "2026-10-07T15:45:00Z",
-  "_source": "clutch-primals unified graph — aggregated from detroit.primals.eco + barry.primals.eco",
+  "_generated": "2026-10-07T20:02:42Z",
+  "_source": "clutch-primals build-unified-graph.py — merged from detroit + barry + shared",
   "_schema_version": "1.0",
   "investigations": {
     "detroit": {
@@ -8,124 +8,2119 @@
       "status": "active",
       "county": "Wayne",
       "evidence_url": "https://detroit.primals.eco",
-      "node_count": 87,
-      "edge_count": 120
+      "node_count": 91
     },
     "saginaw": {
       "label": "Ghost Witness: Aljouny Fabrication",
       "status": "active",
       "county": "Saginaw",
       "evidence_url": "https://barry.primals.eco",
-      "node_count": 12,
-      "edge_count": 18
+      "node_count": 10
     },
     "barry": {
       "label": "Barry County: The Disappeared Judge",
       "status": "tracking",
       "county": "Barry",
       "evidence_url": "https://barry.primals.eco",
-      "node_count": 8,
-      "edge_count": 10
+      "node_count": 2
     },
     "eastpointe": {
       "label": "38th District Court: Galen",
       "status": "tracking",
       "county": "Macomb",
-      "node_count": 4,
-      "edge_count": 6
+      "node_count": 2
+    },
+    "shared": {
+      "label": "Cross-Investigation Enforcement",
+      "status": "active",
+      "note": "Nodes appearing in multiple investigations",
+      "node_count": 4
     }
   },
   "nodes": [
-    { "id": "banks", "label": "Brian Roderick Banks", "type": "actor", "tier": 1, "investigation": "detroit", "url": "https://detroit.primals.eco/network/actors/brian-banks/", "detail": "9 convictions (6 felony). Enterprise leader. Purpose Charter Academy superintendent. Claims J.D. — no bar record." },
-    { "id": "holland", "label": "Joseph Holland Jr.", "type": "actor", "tier": 1, "investigation": "detroit", "url": "https://detroit.primals.eco/network/actors/joseph-holland/", "detail": "Financial gatekeeper. Drug conviction. Co-resident at 1968 Severn Rd. Purpose Foundation Secretary." },
-    { "id": "miller", "label": "Judge Cylenthia Miller", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/cylenthia-miller/", "detail": "PCA Board Chair. Wayne 3rd Circuit. Election Nov 2026." },
-    { "id": "yancey", "label": "Judge Tenisha Yancey", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/tenisha-yancey/", "detail": "36th District. Campaign paid $383.82 to Banks Strategy." },
-    { "id": "moreland", "label": "Lisa Moreland", "type": "judge", "tier": 2, "investigation": "detroit", "detail": "AAG → PCA Board Vice Chair + Banks litigation attorney. MRPC 1.7 conflict." },
-    { "id": "pca", "label": "Purpose Charter Academy", "type": "school", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/entities/purpose-charter-academy/", "detail": "K-8, DPSCD authorized. 10101 E. Canfield, Detroit." },
-    { "id": "macdowell", "label": "MacDowell Preparatory Academy", "type": "school", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/entities/macdowell-prep/", "detail": "K-8, CMU authorized. 3% math. Bottom 3%. $4.9M revenue." },
-    { "id": "purpose_group", "label": "The Purpose Group, LLC", "type": "entity", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/entities/purpose-group-llc/", "detail": "CMO. Sole member: Banks. Extracts 72.67% of MacDowell revenue." },
-    { "id": "purpose_foundation", "label": "Purpose Foundation", "type": "entity", "tier": 3, "investigation": "detroit", "url": "https://detroit.primals.eco/network/entities/purpose-foundation/", "detail": "501(c)(3). 2 felons in all positions. EIN 33-3537910." },
-    { "id": "banks_strategy", "label": "Banks Strategy & Consultants", "type": "entity", "tier": 3, "investigation": "detroit", "url": "https://detroit.primals.eco/network/entities/banks-strategy-llc/", "detail": "Consulting LLC. Receives judge campaign payments." },
-    { "id": "sabree_a", "label": "Judge Aliyah Sabree", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/aliyah-sabree/", "detail": "3rd Circuit Family Division. MSU Law 2010 classmate of Banks." },
-    { "id": "perkins_d", "label": "Judge David Perkins", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/david-perkins/", "detail": "Probate Court. Family donated to Banks campaigns." },
-    { "id": "perkins_sean", "label": "Judge Sean Perkins", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/sean-perkins/", "detail": "36th District. Brother of Todd Perkins (Banks attorney)." },
-    { "id": "ramsey", "label": "Judge Kelly Ramsey", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/kelly-ramsey/", "detail": "3rd Circuit Criminal. 2 family members on MacDowell payroll." },
-    { "id": "vonda_evans", "label": "Judge Vonda Evans (Retired)", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/vonda-evans/", "detail": "21-year Banks mentor. Retired to avoid JTC suspension." },
-    { "id": "langford_morris", "label": "Judge Denise Langford Morris", "type": "judge", "tier": 2, "investigation": "detroit", "url": "https://detroit.primals.eco/network/judges/denise-langford-morris/", "detail": "Oakland Circuit (retired, JAMS). Wrote book foreword using Banks fake J.D." },
-    { "id": "todd_perkins", "label": "Todd Perkins", "type": "actor", "tier": 3, "investigation": "detroit", "url": "https://detroit.primals.eco/network/professional-enablers/todd-perkins/", "detail": "Banks attorney. Bar P55623. Brother of Judge Sean Perkins." },
-    { "id": "crump_gibson", "label": "Crump-Gibson", "type": "actor", "tier": 2, "investigation": "detroit", "detail": "Banks attorney. Attorney Discipline Board panelist. Great Lakes Legal Group." },
-    { "id": "v_hall", "label": "V. Hall", "type": "actor", "tier": 2, "investigation": "detroit", "detail": "Filed PPO against journalist. Maiden name = Crump." },
-    { "id": "gay_dagnogo", "label": "Sherry Gay-Dagnogo", "type": "political", "tier": 3, "investigation": "detroit", "url": "https://detroit.primals.eco/network/political/sherry-gay-dagnogo/", "detail": "Detroit Ombudsman. Former DPSCD board. Authorized Banks charters." },
-    { "id": "sheffield", "label": "Mayor Mary Sheffield", "type": "political", "tier": 2, "investigation": "detroit", "detail": "Detroit Mayor (Jan 2026). Appointed Bettison. Endorsed Banks." },
-    { "id": "bettison", "label": "Chief James Bettison", "type": "political", "tier": 2, "investigation": "detroit", "detail": "DPD Chief + DPSA Board Secretary. OIG investigation." },
-    { "id": "johnson_l", "label": "Latisha Johnson", "type": "political", "tier": 3, "investigation": "detroit", "detail": "City Council D2 + PCA Board Secretary. SDJ-funded campaign." },
-    { "id": "wells_stallworth", "label": "Nicole Wells-Stallworth", "type": "actor", "tier": 3, "investigation": "detroit", "detail": "MacDowell Board President since 2014. Stallworth dynasty." },
-    { "id": "hutchings", "label": "D. Hutchings", "type": "actor", "tier": 3, "investigation": "detroit", "detail": "PCA Board Treasurer. Ypsilanti — not from Detroit." },
-    { "id": "clora", "label": "M. Clora", "type": "actor", "tier": 3, "investigation": "detroit", "detail": "PCA Board Director." },
-    { "id": "agc", "label": "Attorney Grievance Commission", "type": "enforcement", "tier": 3, "investigation": "shared", "detail": "Dismisses 94% of complaints. Same commission handles Detroit, Saginaw, Barry." },
-    { "id": "jtc", "label": "Judicial Tenure Commission", "type": "enforcement", "tier": 3, "investigation": "shared", "detail": "Years-long timelines. Confidential proceedings. Same commission, every case." },
-    { "id": "scao", "label": "State Court Administrative Office", "type": "enforcement", "tier": 3, "investigation": "shared", "detail": "Notified of structural failures. Response: silence." },
-    { "id": "mde", "label": "Michigan Dept. of Education", "type": "enforcement", "tier": 3, "investigation": "detroit", "detail": "Investigated Banks Feb 2022 for no credential. Cleared." },
-    { "id": "dpscd", "label": "DPSCD", "type": "institutional", "tier": 3, "investigation": "detroit", "detail": "Authorized PCA despite operator's bottom-3% record." },
-    { "id": "cmu", "label": "Central Michigan University", "type": "institutional", "tier": 3, "investigation": "detroit", "detail": "Authorized MacDowell. 150 miles away." },
-    { "id": "ellison", "label": "Philip L. Ellison", "type": "actor", "tier": 1, "investigation": "saginaw", "url": "https://barry.primals.eco/actors/ellison/", "detail": "$74K federal sanctions. 153 domains. SCOTUS 9-0 win. Fabricated witness." },
-    { "id": "aljouny", "label": "Samantha Aljouny (Ghost)", "type": "entity", "tier": 1, "investigation": "saginaw", "url": "https://barry.primals.eco/evidence/ghost-witness-aljouny/", "detail": "Fabricated witness. 13 convergence points confirm non-existence." },
-    { "id": "lindke", "label": "Kevin Lindke", "type": "actor", "tier": 2, "investigation": "saginaw", "url": "https://barry.primals.eco/actors/lindke/", "detail": "Ellison client. Convicted computer crime. 272 days served. Domains in minor child name." },
-    { "id": "gafkay", "label": "Judge Julie Gafkay", "type": "judge", "tier": 2, "investigation": "saginaw", "url": "https://barry.primals.eco/actors/gafkay/", "detail": "Chief Judge 10th Circuit. SVSU colleague of Ellison. 3 simultaneous Ellison cases." },
-    { "id": "borrello", "label": "Judge Andre Borrello", "type": "judge", "tier": 2, "investigation": "saginaw", "url": "https://barry.primals.eco/actors/borrello/", "detail": "Signed contempt, then recused himself." },
-    { "id": "schipper", "label": "Judge Michael Schipper", "type": "judge", "tier": 2, "investigation": "barry", "url": "https://barry.primals.eco/actors/schipper/", "detail": "Active JTC investigation. 6-10x guideline sentencing. ADA retaliation." },
-    { "id": "nakfoor_pratt", "label": "Julie Nakfoor Pratt", "type": "actor", "tier": 2, "investigation": "barry", "url": "https://barry.primals.eco/actors/nakfoor-pratt/", "detail": "Private ADB admonishment (MRPC 3.4(e)). Brady/Giglio failures." },
-    { "id": "galen", "label": "Judge Kathleen Galen", "type": "judge", "tier": 2, "investigation": "eastpointe", "url": "https://barry.primals.eco/actors/galen/", "detail": "JTC admonition. Jailed pregnant woman. Nov 2026 election." },
-    { "id": "foiaworks", "label": "FOIAworks.com", "type": "entity", "tier": 3, "investigation": "saginaw", "url": "https://barry.primals.eco/evidence/foiaworks-honeypot/", "detail": "FOIA platform run by fabricated-witness attorney. No privacy policy. Quagmire Solutions LLC." }
+    {
+      "id": "adam_sabree",
+      "label": "Judge Adam Sabree",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover",
+      "url": "https://detroit.primals.eco/network/judges/adam-sabree/"
+    },
+    {
+      "id": "alan_young",
+      "label": "Alan C. Young CPA",
+      "type": "actor",
+      "tier": 4,
+      "investigation": "detroit",
+      "detail": "Auditor"
+    },
+    {
+      "id": "archer",
+      "label": "Dennis Archer",
+      "type": "political",
+      "tier": 5,
+      "investigation": "detroit",
+      "detail": "Mayor 1994-2001"
+    },
+    {
+      "id": "banks",
+      "label": "Brian Roderick Banks",
+      "type": "actor",
+      "tier": 1,
+      "investigation": "detroit",
+      "detail": "Enterprise leader",
+      "url": "https://detroit.primals.eco/network/actors/brian-banks/"
+    },
+    {
+      "id": "bettison",
+      "label": "Chief James Bettison",
+      "type": "political",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "DPD Chief + DPSA Board"
+    },
+    {
+      "id": "bing",
+      "label": "Dave Bing",
+      "type": "political",
+      "tier": 5,
+      "investigation": "detroit",
+      "detail": "Mayor 2009-2013"
+    },
+    {
+      "id": "carol_banks",
+      "label": "Carol Banks",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Political operative"
+    },
+    {
+      "id": "carolyn_kilpatrick",
+      "label": "Carolyn Cheeks Kilpatrick",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Former Congresswoman"
+    },
+    {
+      "id": "clora",
+      "label": "M. Clora",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "PCA Board Director"
+    },
+    {
+      "id": "coleman_young",
+      "label": "Coleman Young",
+      "type": "political",
+      "tier": 5,
+      "investigation": "detroit",
+      "detail": "Mayor 1974-1993"
+    },
+    {
+      "id": "crump_gibson",
+      "label": "Crump-Gibson",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Attorney"
+    },
+    {
+      "id": "daniels",
+      "label": "Kenneth Daniels",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "SDJ President"
+    },
+    {
+      "id": "duggan",
+      "label": "Mike Duggan",
+      "type": "political",
+      "tier": 4,
+      "investigation": "detroit",
+      "detail": "Mayor 2014-2025"
+    },
+    {
+      "id": "dumas",
+      "label": "Karen Dumas",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Communications chief"
+    },
+    {
+      "id": "eric_sabree",
+      "label": "Eric Sabree",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Political enabler — family dynasty",
+      "url": "https://detroit.primals.eco/network/political/eric-sabree/"
+    },
+    {
+      "id": "evans",
+      "label": "Warren Evans",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Wayne County Executive"
+    },
+    {
+      "id": "fiore",
+      "label": "Gerald Fiore",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Convicted bribery"
+    },
+    {
+      "id": "gay_dagnogo",
+      "label": "Sherry Gay-Dagnogo",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Political enabler — charter authorizer",
+      "url": "https://detroit.primals.eco/network/political/sherry-gay-dagnogo/"
+    },
+    {
+      "id": "gordon",
+      "label": "Jason Gordon",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Attorney"
+    },
+    {
+      "id": "holland",
+      "label": "Joseph Holland Jr.",
+      "type": "actor",
+      "tier": 1,
+      "investigation": "detroit",
+      "detail": "Financial gatekeeper",
+      "url": "https://detroit.primals.eco/network/actors/joseph-holland/"
+    },
+    {
+      "id": "hutchings",
+      "label": "D. Hutchings",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "PCA Board Treasurer"
+    },
+    {
+      "id": "johnson_l",
+      "label": "Latisha Johnson",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "City Council D2 + PCA Board"
+    },
+    {
+      "id": "kelly_ramsey",
+      "label": "Judge Kelly Ramsey",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover",
+      "url": "https://detroit.primals.eco/network/judges/kelly-ramsey/"
+    },
+    {
+      "id": "kwame",
+      "label": "Kwame Kilpatrick",
+      "type": "political",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Mayor 2002-2008",
+      "url": "https://detroit.primals.eco/network/political/kilpatrick-dynasty/"
+    },
+    {
+      "id": "langford_morris",
+      "label": "Judge Denise Langford Morris (Retired)",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover — credential legitimizer",
+      "url": "https://detroit.primals.eco/network/judges/denise-langford-morris/"
+    },
+    {
+      "id": "larry_thomas",
+      "label": "Larry Thomas Jr",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Inner Link Graphics owner"
+    },
+    {
+      "id": "leach",
+      "label": "W. Spencer Leach",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Machine builder"
+    },
+    {
+      "id": "mccastle",
+      "label": "Gerald McCastle",
+      "type": "actor",
+      "tier": 4,
+      "investigation": "detroit",
+      "detail": "Campaign operative"
+    },
+    {
+      "id": "mckinney",
+      "label": "Billy McKinney",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Political enabler — campaign operative",
+      "url": "https://detroit.primals.eco/network/political/billy-mckinney/"
+    },
+    {
+      "id": "miller",
+      "label": "Judge Cylenthia Miller",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover",
+      "url": "https://detroit.primals.eco/network/judges/cylenthia-miller/"
+    },
+    {
+      "id": "moreland",
+      "label": "Lisa Moreland",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "AAG → PCA Board Director"
+    },
+    {
+      "id": "od_banks",
+      "label": "OD Banks",
+      "type": "actor",
+      "tier": 5,
+      "investigation": "detroit",
+      "detail": "BMF Defendant #22"
+    },
+    {
+      "id": "perkins_david",
+      "label": "Judge David Perkins",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover",
+      "url": "https://detroit.primals.eco/network/judges/david-perkins/"
+    },
+    {
+      "id": "pugh",
+      "label": "Charles Pugh",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Former City Council President"
+    },
+    {
+      "id": "ross",
+      "label": "Carlton Ross",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Right Turn Treasurer"
+    },
+    {
+      "id": "sabree",
+      "label": "Judge Aliyah Sabree",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover",
+      "url": "https://detroit.primals.eco/network/judges/aliyah-sabree/"
+    },
+    {
+      "id": "schmiedeknecht",
+      "label": "Katie Schmiedeknecht",
+      "type": "actor",
+      "tier": 4,
+      "investigation": "detroit",
+      "detail": "MDE Analyst",
+      "url": "https://detroit.primals.eco/actors/katie-schmiedeknecht/"
+    },
+    {
+      "id": "sean_perkins",
+      "label": "Judge Sean Perkins",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover",
+      "url": "https://detroit.primals.eco/network/judges/sean-perkins/"
+    },
+    {
+      "id": "sheffield",
+      "label": "Mayor Mary Sheffield",
+      "type": "political",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Mayor"
+    },
+    {
+      "id": "spivey",
+      "label": "Andre Spivey",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Convicted council member"
+    },
+    {
+      "id": "stallworth_t",
+      "label": "Thomas Stallworth III",
+      "type": "political",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Former State Rep"
+    },
+    {
+      "id": "todd_perkins",
+      "label": "Todd Perkins",
+      "type": "actor",
+      "tier": 4,
+      "investigation": "detroit",
+      "detail": "Professional enabler — attorney",
+      "url": "https://detroit.primals.eco/network/professional-enablers/todd-perkins/"
+    },
+    {
+      "id": "v_hall",
+      "label": "V. Hall",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Attorney"
+    },
+    {
+      "id": "vaughn",
+      "label": "Bishop Corletta Vaughn",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "DPSCD Board President"
+    },
+    {
+      "id": "vonda_evans",
+      "label": "Judge Vonda Evans (Retired)",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover — mentor",
+      "url": "https://detroit.primals.eco/network/judges/vonda-evans/"
+    },
+    {
+      "id": "welch",
+      "label": "Tonesa Welch",
+      "type": "actor",
+      "tier": 5,
+      "investigation": "detroit",
+      "detail": "BMF figure"
+    },
+    {
+      "id": "wells_stallworth",
+      "label": "Nicole Wells-Stallworth",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Board President"
+    },
+    {
+      "id": "yancey",
+      "label": "Judge Tenisha Yancey",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "detroit",
+      "detail": "Judicial cover",
+      "url": "https://detroit.primals.eco/network/judges/tenisha-yancey/"
+    },
+    {
+      "id": "anchor_rock",
+      "label": "Anchor Rock Foundation",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/anchor-rock-foundation/"
+    },
+    {
+      "id": "banks_strategy",
+      "label": "Banks Strategy & Consultants LLC",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/banks-strategy-llc/"
+    },
+    {
+      "id": "chandler_park",
+      "label": "Chandler Park Academy",
+      "type": "school",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "city_hill",
+      "label": "City Hill Church",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/city-hill-church/"
+    },
+    {
+      "id": "cmu",
+      "label": "Central Michigan University",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "custom_promo",
+      "label": "Custom Promotions",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "dpsa",
+      "label": "Detroit Public Safety Academy",
+      "type": "school",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "dpscd",
+      "label": "Detroit Public Schools Community District",
+      "type": "school",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "dpscd_auth",
+      "label": "DPSCD (Authorizer)",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "dykema",
+      "label": "Dykema Gossett",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "eastside_slate",
+      "label": "Original Eastside Slate",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "emu",
+      "label": "Eastern Michigan University",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "escuela_avancemos",
+      "label": "Escuela Avancemos",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "great_lakes_legal",
+      "label": "Great Lakes Legal Group",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "gvsu",
+      "label": "Grand Valley State University",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "inner_link",
+      "label": "Inner Link Graphics",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/inner-link-graphics/"
+    },
+    {
+      "id": "macdowell",
+      "label": "MacDowell Preparatory Academy",
+      "type": "school",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/macdowell-prep/"
+    },
+    {
+      "id": "mde",
+      "label": "Michigan Department of Education",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "nha",
+      "label": "National Heritage Academies",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "pacs",
+      "label": "Political Action Committees",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/political-action-committees/"
+    },
+    {
+      "id": "pca",
+      "label": "Purpose Charter Academy",
+      "type": "school",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/purpose-charter-academy/"
+    },
+    {
+      "id": "purpose_foundation",
+      "label": "Purpose Foundation",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/purpose-foundation/"
+    },
+    {
+      "id": "purpose_group",
+      "label": "The Purpose Group, LLC",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/purpose-group-llc/"
+    },
+    {
+      "id": "right_turn",
+      "label": "Right Turn Project",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "ross_catering",
+      "label": "Ross Catering",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "sdj",
+      "label": "Save Detroit Jobs",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "serenity",
+      "label": "Serenity Guardianship Services, Inc.",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/serenity-guardianship/"
+    },
+    {
+      "id": "sun_community",
+      "label": "Sun Community Development Corp",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "",
+      "url": "https://detroit.primals.eco/network/entities/sun-community-development/"
+    },
+    {
+      "id": "ag_office",
+      "label": "ag office",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "city_council",
+      "label": "city council",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "court_36th",
+      "label": "court 36th",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "court_3rd",
+      "label": "court 3rd",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "court_oakland",
+      "label": "court oakland",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "court_probate",
+      "label": "court probate",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "latisha_johnson",
+      "label": "latisha johnson",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "ofa",
+      "label": "ofa",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "perkins_d",
+      "label": "perkins d",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "perkins_sean",
+      "label": "perkins sean",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "perkins_t",
+      "label": "perkins t",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "ramsey",
+      "label": "ramsey",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "sabree_a",
+      "label": "sabree a",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "sabree_adam",
+      "label": "sabree adam",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "sabree_e",
+      "label": "sabree e",
+      "type": "institutional",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": ""
+    },
+    {
+      "id": "ellison",
+      "label": "Philip L. Ellison",
+      "type": "actor",
+      "tier": 1,
+      "investigation": "saginaw",
+      "url": "https://barry.primals.eco/actors/ellison/",
+      "detail": "OLC PLC, Hemlock. $74K federal sanctions. SCOTUS 9-0 win (Pung). Fabricated witness. 153 domains. FOIAworks operator."
+    },
+    {
+      "id": "aljouny",
+      "label": "Samantha Aljouny (Ghost)",
+      "type": "entity",
+      "tier": 1,
+      "investigation": "saginaw",
+      "url": "https://barry.primals.eco/evidence/ghost-witness-aljouny/",
+      "detail": "Fabricated witness. 13 convergence points confirm non-existence. Aljouny Media Consulting."
+    },
+    {
+      "id": "lindke",
+      "label": "Kevin Lindke",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "saginaw",
+      "url": "https://barry.primals.eco/actors/lindke/",
+      "detail": "Ellison client. Convicted: computer crime, 272 days. 21K-member Facebook group. Domains in minor child name."
+    },
+    {
+      "id": "gafkay",
+      "label": "Judge Julie A. Gafkay",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "saginaw",
+      "url": "https://barry.primals.eco/actors/gafkay/",
+      "detail": "Chief Judge 10th Circuit. SVSU colleague of Ellison (6yr overlap). 3 simultaneous Ellison cases."
+    },
+    {
+      "id": "borrello",
+      "label": "Judge Andre R. Borrello",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "saginaw",
+      "url": "https://barry.primals.eco/actors/borrello/",
+      "detail": "Signed contempt order based on ghost witness, then recused himself."
+    },
+    {
+      "id": "ellsworth",
+      "label": "Kelly D. Ellsworth",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "saginaw",
+      "url": "https://barry.primals.eco/actors/ellsworth/",
+      "detail": "Briefly represented Rita. Dissuaded her. SCBA insider, family in bar since 1986."
+    },
+    {
+      "id": "schipper",
+      "label": "Judge Michael Schipper",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "barry",
+      "url": "https://barry.primals.eco/actors/schipper/",
+      "detail": "Active JTC investigation. 6-10x guideline sentencing. ADA retaliation. Disappeared from bench."
+    },
+    {
+      "id": "nakfoor_pratt",
+      "label": "Julie Nakfoor Pratt",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "barry",
+      "url": "https://barry.primals.eco/actors/nakfoor-pratt/",
+      "detail": "Private ADB admonishment (MRPC 3.4(e)). Brady/Giglio failures. FOIA obstruction."
+    },
+    {
+      "id": "galen",
+      "label": "Judge Kathleen G. Galen",
+      "type": "judge",
+      "tier": 2,
+      "investigation": "eastpointe",
+      "url": "https://barry.primals.eco/actors/galen/",
+      "detail": "38th District Court. JTC admonition. Jailed pregnant woman (reversed). Campaign staff = court staff."
+    },
+    {
+      "id": "makoski",
+      "label": "Mark Makoski",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "eastpointe",
+      "detail": "Galen campaign treasurer → magistrate in her courtroom. Wine pub attorney."
+    },
+    {
+      "id": "foiaworks",
+      "label": "FOIAworks.com",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "saginaw",
+      "url": "https://barry.primals.eco/evidence/foiaworks-honeypot/",
+      "detail": "FOIA platform run by fabricated-witness attorney. No privacy policy. Quagmire Solutions LLC."
+    },
+    {
+      "id": "quagmire",
+      "label": "Quagmire Solutions LLC",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "saginaw",
+      "detail": "Ellison entity. 153 domains. Registered harassment domains. info@quagmiresolutions.com."
+    },
+    {
+      "id": "olc_plc",
+      "label": "Outside Legal Counsel PLC",
+      "type": "entity",
+      "tier": 2,
+      "investigation": "saginaw",
+      "detail": "Ellison law firm. Hemlock, MI. FOIA enforcement, class actions, SLAPP suits."
+    },
+    {
+      "id": "katie_ellison",
+      "label": "Katherine Ellison",
+      "type": "political",
+      "tier": 3,
+      "investigation": "saginaw",
+      "detail": "Hemlock School Board President. Philip Ellison wife. Anderson localization anchor."
+    },
+    {
+      "id": "agc",
+      "label": "Attorney Grievance Commission",
+      "type": "enforcement",
+      "tier": 3,
+      "investigation": "shared",
+      "detail": "Dismisses 94% of complaints (2024 Annual Report). Same commission handles Detroit, Saginaw, Barry."
+    },
+    {
+      "id": "jtc",
+      "label": "Judicial Tenure Commission",
+      "type": "enforcement",
+      "tier": 3,
+      "investigation": "shared",
+      "detail": "Years-long timelines. Confidential proceedings. Same commission, every case."
+    },
+    {
+      "id": "scao",
+      "label": "State Court Administrative Office",
+      "type": "enforcement",
+      "tier": 3,
+      "investigation": "shared",
+      "detail": "Notified of structural failures in Barry + Detroit. Response: silence."
+    },
+    {
+      "id": "state_bar_upl",
+      "label": "State Bar UPL Department",
+      "type": "enforcement",
+      "tier": 3,
+      "investigation": "shared",
+      "detail": "Handles non-lawyers. Emmons closure letter Sep 30. One day before AGC kickback."
+    }
   ],
   "edges": [
-    { "source": "banks", "target": "pca", "type": "employment", "flow": "position", "label": "Superintendent", "source_doc": "purposecharteracademy.com" },
-    { "source": "banks", "target": "macdowell", "type": "employment", "flow": "position", "label": "Superintendent", "source_doc": "macdowellprep.com" },
-    { "source": "banks", "target": "purpose_group", "type": "ownership", "flow": "power", "label": "Sole member", "source_doc": "LARA 803295082" },
-    { "source": "banks", "target": "purpose_foundation", "type": "governance", "flow": "power", "label": "President + Agent", "source_doc": "LARA 803294855" },
-    { "source": "banks", "target": "banks_strategy", "type": "ownership", "flow": "power", "label": "Owner", "source_doc": "LARA 802070120" },
-    { "source": "holland", "target": "banks", "type": "co-resident", "flow": "influence", "label": "1968 Severn Rd", "source_doc": "Wayne ROD" },
-    { "source": "holland", "target": "purpose_foundation", "type": "governance", "flow": "position", "label": "Secretary + Treasurer", "source_doc": "LARA 803294855" },
-    { "source": "miller", "target": "pca", "type": "board", "flow": "position", "label": "Board Chair", "source_doc": "PCA website Sep 2026" },
-    { "source": "moreland", "target": "pca", "type": "board", "flow": "position", "label": "Board Vice Chair + litigation attorney", "source_doc": "PCA website" },
-    { "source": "johnson_l", "target": "pca", "type": "board", "flow": "position", "label": "Board Secretary", "source_doc": "PCA website" },
-    { "source": "hutchings", "target": "pca", "type": "board", "flow": "position", "label": "Board Treasurer", "source_doc": "PCA website" },
-    { "source": "clora", "target": "pca", "type": "board", "flow": "position", "label": "Board Director", "source_doc": "PCA website" },
-    { "source": "yancey", "target": "banks_strategy", "type": "payment", "flow": "money", "label": "$383.82", "source_doc": "CFRS" },
-    { "source": "macdowell", "target": "purpose_group", "type": "money_flow", "flow": "money", "label": "72.67% ($4.3M)", "source_doc": "Audited financials" },
-    { "source": "purpose_group", "target": "banks", "type": "money_flow", "flow": "money", "label": "Management fee → sole member", "source_doc": "LARA" },
-    { "source": "wells_stallworth", "target": "macdowell", "type": "board", "flow": "position", "label": "Board President", "source_doc": "School records" },
-    { "source": "ramsey", "target": "macdowell", "type": "employment_family", "flow": "influence", "label": "2 family on payroll", "source_doc": "School records" },
-    { "source": "sabree_a", "target": "banks", "type": "classmate", "flow": "influence", "label": "MSU Law 2010", "source_doc": "Graduation records" },
-    { "source": "perkins_sean", "target": "todd_perkins", "type": "family", "flow": "influence", "label": "Brothers", "source_doc": "Public record" },
-    { "source": "todd_perkins", "target": "banks", "type": "legal", "flow": "influence", "label": "Personal attorney", "source_doc": "Court filings" },
-    { "source": "todd_perkins", "target": "miller", "type": "legal", "flow": "influence", "label": "Represented in gun case", "source_doc": "WXYZ" },
-    { "source": "crump_gibson", "target": "banks", "type": "legal", "flow": "influence", "label": "Attorney (ADB panelist)", "source_doc": "LARA 802112914" },
-    { "source": "v_hall", "target": "banks", "type": "legal", "flow": "influence", "label": "Filed PPO against journalist", "source_doc": "Court filings" },
-    { "source": "gay_dagnogo", "target": "pca", "type": "authorization", "flow": "power", "label": "DPSCD board authorized charter", "source_doc": "Board minutes" },
-    { "source": "sheffield", "target": "bettison", "type": "appointment", "flow": "power", "label": "Appointed chief", "source_doc": "Public record" },
-    { "source": "bettison", "target": "sheffield", "type": "political", "flow": "power", "label": "OIG probe phone call" },
-    { "source": "vonda_evans", "target": "banks", "type": "mentorship", "flow": "influence", "label": "21-year mentor", "source_doc": "Book analysis" },
-    { "source": "langford_morris", "target": "banks", "type": "credential", "flow": "influence", "label": "Book foreword w/ fake J.D.", "source_doc": "Book" },
-    { "source": "dpscd", "target": "pca", "type": "authorization", "flow": "power", "label": "Authorized despite bottom-3%", "source_doc": "DPSCD records" },
-    { "source": "cmu", "target": "macdowell", "type": "authorization", "flow": "power", "label": "Authorized (150 mi away)", "source_doc": "CMU charter office" },
-    { "source": "mde", "target": "banks", "type": "investigation", "flow": "power", "label": "Investigated Feb 2022, cleared", "source_doc": "FOIA" },
-    { "source": "banks", "target": "agc", "type": "complaint", "flow": "power", "label": "Complaint filed Sep 2026" },
-    { "source": "miller", "target": "jtc", "type": "complaint", "flow": "power", "label": "Complaint filed Oct 2026" },
-    { "source": "ellison", "target": "aljouny", "type": "fabrication", "flow": "influence", "label": "Submitted ghost witness affidavit" },
-    { "source": "ellison", "target": "agc", "type": "complaint", "flow": "power", "label": "Complaint filed" },
-    { "source": "ellison", "target": "foiaworks", "type": "ownership", "flow": "power", "label": "Operates platform via Quagmire Solutions", "source_doc": "LARA" },
-    { "source": "lindke", "target": "ellison", "type": "client", "flow": "money", "label": "Client — Lindke v. Freed (SCOTUS)", "source_doc": "PACER" },
-    { "source": "gafkay", "target": "ellison", "type": "professional", "flow": "influence", "label": "SVSU colleague, 3 simultaneous cases", "source_doc": "Court records" },
-    { "source": "borrello", "target": "aljouny", "type": "judicial", "flow": "power", "label": "Signed contempt order, then recused", "source_doc": "Court records" },
-    { "source": "schipper", "target": "jtc", "type": "investigation", "flow": "power", "label": "Active JTC investigation" },
-    { "source": "nakfoor_pratt", "target": "agc", "type": "admonishment", "flow": "power", "label": "Private ADB admonishment", "source_doc": "ADB 2021 Annual Report" },
-    { "source": "galen", "target": "jtc", "type": "admonition", "flow": "power", "label": "JTC admonition", "source_doc": "JTC records" }
+    {
+      "source": "banks",
+      "target": "pca",
+      "type": "employment",
+      "flow": "influence",
+      "label": "Superintendent",
+      "source_doc": "purposecharteracademy.com"
+    },
+    {
+      "source": "banks",
+      "target": "macdowell",
+      "type": "employment",
+      "flow": "influence",
+      "label": "Superintendent",
+      "source_doc": "macdowellprep.com"
+    },
+    {
+      "source": "banks",
+      "target": "purpose_group",
+      "type": "ownership",
+      "flow": "influence",
+      "label": "Sole member",
+      "source_doc": "LARA 803295082"
+    },
+    {
+      "source": "banks",
+      "target": "purpose_foundation",
+      "type": "governance",
+      "flow": "influence",
+      "label": "President + Agent",
+      "source_doc": "LARA 803294855"
+    },
+    {
+      "source": "banks",
+      "target": "banks_strategy",
+      "type": "ownership",
+      "flow": "influence",
+      "label": "Owner",
+      "source_doc": "LARA 802070120"
+    },
+    {
+      "source": "banks",
+      "target": "serenity",
+      "type": "ownership",
+      "flow": "influence",
+      "label": "Principal (dissolved)",
+      "source_doc": "LARA 802290962"
+    },
+    {
+      "source": "banks",
+      "target": "city_hill",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Pastor / controller",
+      "source_doc": "LARA 802365641"
+    },
+    {
+      "source": "banks",
+      "target": "sun_community",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Officer",
+      "source_doc": "LARA 803232314"
+    },
+    {
+      "source": "banks",
+      "target": "pacs",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Treasurer (Bank on Wayne Co.)",
+      "source_doc": "CFRS"
+    },
+    {
+      "source": "banks",
+      "target": "ofa",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Officer (Holland's PO Box)",
+      "source_doc": "LARA"
+    },
+    {
+      "source": "holland",
+      "target": "banks",
+      "type": "co-resident",
+      "flow": "influence",
+      "label": "Same address: 1968 Severn Rd, GPW",
+      "source_doc": "Wayne County ROD"
+    },
+    {
+      "source": "holland",
+      "target": "purpose_foundation",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Secretary + Treasurer",
+      "source_doc": "LARA 803294855"
+    },
+    {
+      "source": "holland",
+      "target": "pacs",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Treasurer (Bank on Banks PAC)",
+      "source_doc": "CFRS"
+    },
+    {
+      "source": "holland",
+      "target": "ofa",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Officer",
+      "source_doc": "LARA"
+    },
+    {
+      "source": "miller",
+      "target": "pca",
+      "type": "board_membership",
+      "flow": "influence",
+      "label": "Board Chair",
+      "source_doc": "purposecharteracademy.com/boardofdirectors (Sep 2026)"
+    },
+    {
+      "source": "miller",
+      "target": "anchor_rock",
+      "type": "board_membership",
+      "flow": "influence",
+      "label": "Board Chair (historical)",
+      "source_doc": "LARA 802394934"
+    },
+    {
+      "source": "miller",
+      "target": "court_3rd",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge"
+    },
+    {
+      "source": "miller",
+      "target": "banks",
+      "type": "campaign_vendor",
+      "flow": "influence",
+      "label": "Banks Strategy as campaign vendor",
+      "source_doc": "CFRS"
+    },
+    {
+      "source": "moreland",
+      "target": "pca",
+      "type": "board_membership",
+      "flow": "influence",
+      "label": "Board Vice Chair",
+      "source_doc": "purposecharteracademy.com/boardofdirectors"
+    },
+    {
+      "source": "moreland",
+      "target": "ag_office",
+      "type": "employment",
+      "flow": "influence",
+      "label": "Assistant Attorney General"
+    },
+    {
+      "source": "latisha_johnson",
+      "target": "pca",
+      "type": "board_membership",
+      "flow": "influence",
+      "label": "Board Secretary",
+      "source_doc": "purposecharteracademy.com/boardofdirectors"
+    },
+    {
+      "source": "latisha_johnson",
+      "target": "city_council",
+      "type": "elected_office",
+      "flow": "influence",
+      "label": "Council Member"
+    },
+    {
+      "source": "yancey",
+      "target": "macdowell",
+      "type": "board_membership",
+      "flow": "influence",
+      "label": "Board Chair",
+      "source_doc": "Clutch Justice Sep 13, 2026"
+    },
+    {
+      "source": "yancey",
+      "target": "banks_strategy",
+      "type": "payment",
+      "flow": "influence",
+      "label": "Sole contribution and sole expenditure",
+      "amount": "383.82",
+      "source_doc": "CFRS"
+    },
+    {
+      "source": "yancey",
+      "target": "inner_link",
+      "type": "payment",
+      "flow": "influence",
+      "label": "Campaign vendor payments",
+      "amount": "8025",
+      "source_doc": "TransparencyUSA"
+    },
+    {
+      "source": "yancey",
+      "target": "court_36th",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge"
+    },
+    {
+      "source": "sabree_a",
+      "target": "court_3rd",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge (Family Division)"
+    },
+    {
+      "source": "sabree_a",
+      "target": "banks",
+      "type": "classmate",
+      "flow": "influence",
+      "label": "MSU Law 2010 — same year as Banks' claimed J.D.",
+      "source_doc": "Graduation records"
+    },
+    {
+      "source": "eric_sabree",
+      "target": "sabree_a",
+      "type": "family",
+      "flow": "influence",
+      "label": "Father"
+    },
+    {
+      "source": "eric_sabree",
+      "target": "sabree_adam",
+      "type": "family",
+      "flow": "influence",
+      "label": "Father"
+    },
+    {
+      "source": "eric_sabree",
+      "target": "miller",
+      "type": "political",
+      "flow": "influence",
+      "label": "Listed as endorser on keepjudgemiller.com",
+      "source_doc": "keepjudgemiller.com"
+    },
+    {
+      "source": "sabree_adam",
+      "target": "court_36th",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge"
+    },
+    {
+      "source": "perkins_d",
+      "target": "court_probate",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Chief Judge Pro Tem"
+    },
+    {
+      "source": "perkins_d",
+      "target": "banks",
+      "type": "family_donation",
+      "flow": "influence",
+      "label": "Family donated to Banks-aligned campaigns",
+      "source_doc": "CFRS"
+    },
+    {
+      "source": "perkins_sean",
+      "target": "court_36th",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge"
+    },
+    {
+      "source": "perkins_sean",
+      "target": "todd_perkins",
+      "type": "family",
+      "flow": "influence",
+      "label": "Brother"
+    },
+    {
+      "source": "ramsey",
+      "target": "court_3rd",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge (Criminal Division)"
+    },
+    {
+      "source": "ramsey",
+      "target": "macdowell",
+      "type": "employment_family",
+      "flow": "influence",
+      "label": "2 family members on MacDowell payroll",
+      "source_doc": "School records"
+    },
+    {
+      "source": "evans",
+      "target": "court_3rd",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge (retired)"
+    },
+    {
+      "source": "evans",
+      "target": "banks",
+      "type": "mentorship",
+      "flow": "influence",
+      "label": "21-year mentor. Endorsed Banks despite criminal record.",
+      "source_doc": "Book analysis"
+    },
+    {
+      "source": "langford_morris",
+      "target": "court_oakland",
+      "type": "bench",
+      "flow": "influence",
+      "label": "Judge (retired, now JAMS)"
+    },
+    {
+      "source": "langford_morris",
+      "target": "banks",
+      "type": "credential_legitimization",
+      "flow": "influence",
+      "label": "Wrote book foreword using Banks' fake J.D.",
+      "source_doc": "Book analysis"
+    },
+    {
+      "source": "todd_perkins",
+      "target": "banks",
+      "type": "legal_representation",
+      "flow": "influence",
+      "label": "Personal attorney",
+      "source_doc": "Court filings"
+    },
+    {
+      "source": "todd_perkins",
+      "target": "miller",
+      "type": "legal_representation",
+      "flow": "influence",
+      "label": "Represented Miller in DTW gun case",
+      "source_doc": "WXYZ"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "dpscd",
+      "type": "board_membership",
+      "flow": "influence",
+      "label": "Former board member"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "pca",
+      "type": "authorization",
+      "flow": "influence",
+      "label": "Voted to authorize Banks' charters",
+      "source_doc": "DPSCD board minutes"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "macdowell",
+      "type": "authorization",
+      "flow": "influence",
+      "label": "Authorized charter"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "CBC Week honoree; campaign ally",
+      "source_doc": "Eventbrite"
+    },
+    {
+      "source": "mckinney",
+      "target": "banks",
+      "type": "payment",
+      "flow": "influence",
+      "label": "Campaign → extended Banks family",
+      "amount": "4483",
+      "source_doc": "TransparencyUSA"
+    },
+    {
+      "source": "od_banks",
+      "target": "banks",
+      "type": "family",
+      "flow": "influence",
+      "label": "Father",
+      "source_doc": "PACER 2:05-cr-80955"
+    },
+    {
+      "source": "pca",
+      "target": "purpose_group",
+      "type": "money_flow",
+      "flow": "influence",
+      "label": "Management contract — per-pupil funding flows to CMO"
+    },
+    {
+      "source": "macdowell",
+      "target": "purpose_group",
+      "type": "money_flow",
+      "flow": "influence",
+      "label": "72.67% of $4.9M revenue to CMO",
+      "amount": "4285201",
+      "source_doc": "Audited financials"
+    },
+    {
+      "source": "purpose_group",
+      "target": "banks",
+      "type": "money_flow",
+      "flow": "influence",
+      "label": "Sole member extracts as salary + management fee"
+    },
+    {
+      "source": "pca",
+      "target": "court_3rd",
+      "type": "jurisdiction",
+      "flow": "influence",
+      "label": "Cases from PCA families filed in 3rd Circuit"
+    },
+    {
+      "source": "pca",
+      "target": "court_36th",
+      "type": "jurisdiction",
+      "flow": "influence",
+      "label": "Cases from PCA families filed in 36th District"
+    },
+    {
+      "source": "macdowell",
+      "target": "court_3rd",
+      "type": "jurisdiction",
+      "flow": "influence",
+      "label": "Cases from MacDowell families filed in 3rd Circuit"
+    },
+    {
+      "source": "macdowell",
+      "target": "court_36th",
+      "type": "jurisdiction",
+      "flow": "influence",
+      "label": "Cases from MacDowell families filed in 36th District"
+    },
+    {
+      "source": "purpose_group",
+      "target": "macdowell",
+      "type": "financial",
+      "flow": "influence",
+      "label": "10% SSA + ALL operating costs = 72.67% of revenue",
+      "amount": "72.67%",
+      "source_doc": "Purpose Group Management Agreement (FOIA)"
+    },
+    {
+      "source": "dpscd",
+      "target": "pca",
+      "type": "authorization",
+      "flow": "influence",
+      "label": "Authorized PCA despite operator's bottom-3% record at MacDowell",
+      "source_doc": "DPSCD charter authorization records"
+    },
+    {
+      "source": "escuela_avancemos",
+      "target": "macdowell",
+      "type": "permit",
+      "flow": "influence",
+      "label": "Alana Hubbell — Daily Sub Permit issued through Escuela Avancemos",
+      "source_doc": "MOECS public search Sep 26, 2026"
+    },
+    {
+      "source": "chandler_park",
+      "target": "macdowell",
+      "type": "permit",
+      "flow": "influence",
+      "label": "Ashlie Spencer — Daily Sub Permit issued through Chandler Park Academy",
+      "source_doc": "MOECS public search Sep 26, 2026"
+    },
+    {
+      "source": "purpose_group",
+      "target": "pca",
+      "type": "property",
+      "flow": "influence",
+      "label": "Building purchase option from DPSCD at 10101 E. Canfield",
+      "source_doc": "Purpose Group Management Agreement (FOIA)"
+    },
+    {
+      "source": "banks",
+      "target": "holland",
+      "type": "co-resident",
+      "flow": "influence",
+      "label": "co-resident, all entities"
+    },
+    {
+      "source": "welch",
+      "target": "od_banks",
+      "type": "family",
+      "flow": "influence",
+      "label": "BMF network"
+    },
+    {
+      "source": "wells_stallworth",
+      "target": "macdowell",
+      "type": "board_membership",
+      "flow": "position",
+      "label": "Board President ≥2014"
+    },
+    {
+      "source": "wells_stallworth",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "received investigation, protected"
+    },
+    {
+      "source": "mde",
+      "target": "banks",
+      "type": "investigation",
+      "flow": "power",
+      "label": "HOLD on permit #590606"
+    },
+    {
+      "source": "mde",
+      "target": "macdowell",
+      "type": "investigation",
+      "flow": "power",
+      "label": "investigated Feb 2022, cleared"
+    },
+    {
+      "source": "schmiedeknecht",
+      "target": "mde",
+      "type": "employment",
+      "flow": "position",
+      "label": "analyst, OEE"
+    },
+    {
+      "source": "alan_young",
+      "target": "macdowell",
+      "type": "financial",
+      "flow": "influence",
+      "label": "auditor 9yr (FY17-25)"
+    },
+    {
+      "source": "macdowell",
+      "target": "banks",
+      "type": "money_flow",
+      "flow": "money",
+      "label": "School Admin $667K",
+      "amount": "667000"
+    },
+    {
+      "source": "sheffield",
+      "target": "bettison",
+      "type": "appointment",
+      "flow": "power",
+      "label": "appointed chief"
+    },
+    {
+      "source": "sheffield",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "endorsed"
+    },
+    {
+      "source": "evans",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "endorsed"
+    },
+    {
+      "source": "sabree_e",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "endorsed"
+    },
+    {
+      "source": "inner_link",
+      "target": "banks",
+      "type": "payment",
+      "flow": "money",
+      "label": "$39K Banks for Senate",
+      "amount": "39000"
+    },
+    {
+      "source": "inner_link",
+      "target": "yancey",
+      "type": "payment",
+      "flow": "money",
+      "label": "$8K Yancey campaign",
+      "amount": "8000"
+    },
+    {
+      "source": "mccastle",
+      "target": "banks",
+      "type": "payment",
+      "flow": "money",
+      "label": "$9,450 Banks for Senate",
+      "amount": "9450"
+    },
+    {
+      "source": "mccastle",
+      "target": "gay_dagnogo",
+      "type": "payment",
+      "flow": "money",
+      "label": "$1K Strong Women PAC",
+      "amount": "1000"
+    },
+    {
+      "source": "johnson_l",
+      "target": "pca",
+      "type": "board_membership",
+      "flow": "position",
+      "label": "Board Secretary"
+    },
+    {
+      "source": "inner_link",
+      "target": "johnson_l",
+      "type": "payment",
+      "flow": "money",
+      "label": "$850 campaign",
+      "amount": "850"
+    },
+    {
+      "source": "bettison",
+      "target": "dpsa",
+      "type": "board_membership",
+      "flow": "position",
+      "label": "Board Secretary"
+    },
+    {
+      "source": "bettison",
+      "target": "sheffield",
+      "type": "political",
+      "flow": "power",
+      "label": "OIG probe — phone call"
+    },
+    {
+      "source": "fiore",
+      "target": "banks",
+      "type": "corruption",
+      "flow": "money",
+      "label": "FBI wiretap: 'bid-rigging'"
+    },
+    {
+      "source": "spivey",
+      "target": "fiore",
+      "type": "corruption",
+      "flow": "influence",
+      "label": "Op Northern Hook"
+    },
+    {
+      "source": "perkins_t",
+      "target": "banks",
+      "type": "legal_representation",
+      "flow": "influence",
+      "label": "defense attorney"
+    },
+    {
+      "source": "perkins_t",
+      "target": "fiore",
+      "type": "payment",
+      "flow": "money",
+      "label": "donated $500",
+      "amount": "500"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "perkins_t",
+      "type": "payment",
+      "flow": "money",
+      "label": "$750 mayor campaign",
+      "amount": "750"
+    },
+    {
+      "source": "stallworth_t",
+      "target": "wells_stallworth",
+      "type": "family",
+      "flow": "influence",
+      "label": "married"
+    },
+    {
+      "source": "stallworth_t",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "defended at rally, $1,250"
+    },
+    {
+      "source": "moreland",
+      "target": "banks",
+      "type": "legal_representation",
+      "flow": "influence",
+      "label": "AAG argued against cert → became his attorney + board member"
+    },
+    {
+      "source": "hutchings",
+      "target": "pca",
+      "type": "board_membership",
+      "flow": "position",
+      "label": "Board Treasurer (Ypsilanti)"
+    },
+    {
+      "source": "clora",
+      "target": "pca",
+      "type": "board_membership",
+      "flow": "position",
+      "label": "Board Director"
+    },
+    {
+      "source": "dykema",
+      "target": "sdj",
+      "type": "formation",
+      "flow": "power",
+      "label": "formed entity (compliance@dykema.com)"
+    },
+    {
+      "source": "daniels",
+      "target": "sdj",
+      "type": "governance",
+      "flow": "position",
+      "label": "President + Director"
+    },
+    {
+      "source": "sdj",
+      "target": "johnson_l",
+      "type": "money_flow",
+      "flow": "money",
+      "label": "funded 2021 campaign vs. Elrick"
+    },
+    {
+      "source": "holland",
+      "target": "right_turn",
+      "type": "governance",
+      "flow": "position",
+      "label": "President + Director"
+    },
+    {
+      "source": "ross",
+      "target": "right_turn",
+      "type": "governance",
+      "flow": "position",
+      "label": "Treasurer + Director"
+    },
+    {
+      "source": "banks",
+      "target": "right_turn",
+      "type": "governance",
+      "flow": "power",
+      "label": "controlled via email (BBesq06@aol.com)"
+    },
+    {
+      "source": "pacs",
+      "target": "right_turn",
+      "type": "money_flow",
+      "flow": "money",
+      "label": "PAC transfers"
+    },
+    {
+      "source": "ross",
+      "target": "ross_catering",
+      "type": "ownership",
+      "flow": "money",
+      "label": "treasurer + vendor (self-dealing)"
+    },
+    {
+      "source": "pacs",
+      "target": "ross_catering",
+      "type": "payment",
+      "flow": "money",
+      "label": "$35K+ campaign payments",
+      "amount": "35000"
+    },
+    {
+      "source": "larry_thomas",
+      "target": "inner_link",
+      "type": "ownership",
+      "flow": "power",
+      "label": "owner + agent"
+    },
+    {
+      "source": "gordon",
+      "target": "custom_promo",
+      "type": "ownership",
+      "flow": "power",
+      "label": "dissolve-and-reform (Inc→LLC, 3 mo)"
+    },
+    {
+      "source": "custom_promo",
+      "target": "johnson_l",
+      "type": "payment",
+      "flow": "money",
+      "label": "campaign payments"
+    },
+    {
+      "source": "gordon",
+      "target": "banks",
+      "type": "corruption",
+      "flow": "influence",
+      "label": "UAW bribery network ($3M+)"
+    },
+    {
+      "source": "carol_banks",
+      "target": "eastside_slate",
+      "type": "governance",
+      "flow": "power",
+      "label": "agent — 4th incarnation"
+    },
+    {
+      "source": "carol_banks",
+      "target": "banks",
+      "type": "family",
+      "flow": "influence",
+      "label": "sister"
+    },
+    {
+      "source": "leach",
+      "target": "eastside_slate",
+      "type": "governance",
+      "flow": "influence",
+      "label": "2nd incarnation agent. 13 political entities."
+    },
+    {
+      "source": "eastside_slate",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "endorsement pipeline"
+    },
+    {
+      "source": "crump_gibson",
+      "target": "great_lakes_legal",
+      "type": "ownership",
+      "flow": "power",
+      "label": "agent + member"
+    },
+    {
+      "source": "crump_gibson",
+      "target": "banks",
+      "type": "legal_representation",
+      "flow": "influence",
+      "label": "represents Banks (Discipline Board panelist)"
+    },
+    {
+      "source": "v_hall",
+      "target": "banks",
+      "type": "legal_representation",
+      "flow": "influence",
+      "label": "filed PPO against journalist"
+    },
+    {
+      "source": "v_hall",
+      "target": "crump_gibson",
+      "type": "family",
+      "flow": "influence",
+      "label": "shared surname Crump — MSU — family?"
+    },
+    {
+      "source": "banks",
+      "target": "anchor_rock",
+      "type": "governance",
+      "flow": "power",
+      "label": "agent. 3 assumed names."
+    },
+    {
+      "source": "cmu",
+      "target": "macdowell",
+      "type": "authorization",
+      "flow": "power",
+      "label": "authorized (150 mi away)"
+    },
+    {
+      "source": "dpscd_auth",
+      "target": "pca",
+      "type": "authorization",
+      "flow": "power",
+      "label": "authorized Jul 2025 (3% fee)"
+    },
+    {
+      "source": "emu",
+      "target": "dpsa",
+      "type": "authorization",
+      "flow": "power",
+      "label": "authorized (DPSA)"
+    },
+    {
+      "source": "gvsu",
+      "target": "nha",
+      "type": "authorization",
+      "flow": "power",
+      "label": "authorizes 16+ Detroit NHA schools"
+    },
+    {
+      "source": "macdowell",
+      "target": "cmu",
+      "type": "money_flow",
+      "flow": "money",
+      "label": "3% auth fee (~$147K/yr)",
+      "amount": "147000"
+    },
+    {
+      "source": "pca",
+      "target": "dpscd_auth",
+      "type": "money_flow",
+      "flow": "money",
+      "label": "3% auth fee (~$81K/yr)",
+      "amount": "81000"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "dpscd_auth",
+      "type": "political",
+      "flow": "influence",
+      "label": "DPSCD board → authorized PCA"
+    },
+    {
+      "source": "coleman_young",
+      "target": "archer",
+      "type": "political",
+      "flow": "power",
+      "label": "succeeded 1994"
+    },
+    {
+      "source": "archer",
+      "target": "kwame",
+      "type": "political",
+      "flow": "power",
+      "label": "succeeded 2002"
+    },
+    {
+      "source": "kwame",
+      "target": "bing",
+      "type": "political",
+      "flow": "power",
+      "label": "succeeded after conviction 2008"
+    },
+    {
+      "source": "bing",
+      "target": "duggan",
+      "type": "political",
+      "flow": "power",
+      "label": "succeeded 2014"
+    },
+    {
+      "source": "duggan",
+      "target": "sheffield",
+      "type": "political",
+      "flow": "power",
+      "label": "succeeded 2024"
+    },
+    {
+      "source": "kwame",
+      "target": "carolyn_kilpatrick",
+      "type": "family",
+      "flow": "influence",
+      "label": "mother"
+    },
+    {
+      "source": "carolyn_kilpatrick",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "CBC honorary host 2023"
+    },
+    {
+      "source": "kwame",
+      "target": "dumas",
+      "type": "employment",
+      "flow": "power",
+      "label": "comms chief"
+    },
+    {
+      "source": "dumas",
+      "target": "banks",
+      "type": "political",
+      "flow": "influence",
+      "label": "PR support, thanked in book"
+    },
+    {
+      "source": "bing",
+      "target": "dumas",
+      "type": "employment",
+      "flow": "power",
+      "label": "comms chief (continued)"
+    },
+    {
+      "source": "kwame",
+      "target": "daniels",
+      "type": "appointment",
+      "flow": "power",
+      "label": "appointed to Water Board"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "kwame",
+      "type": "political",
+      "flow": "influence",
+      "label": "sought Kilpatrick clemency 2020"
+    },
+    {
+      "source": "pugh",
+      "target": "banks",
+      "type": "referral",
+      "flow": "influence",
+      "label": "referred Cotton → sexual harassment"
+    },
+    {
+      "source": "vaughn",
+      "target": "pca",
+      "type": "authorization",
+      "flow": "power",
+      "label": "DPSCD Board Pres — authorized charter"
+    },
+    {
+      "source": "vaughn",
+      "target": "macdowell",
+      "type": "authorization",
+      "flow": "power",
+      "label": "DPSCD Board Pres — authorized charter"
+    },
+    {
+      "source": "ellison",
+      "target": "aljouny",
+      "type": "fabrication",
+      "flow": "influence",
+      "label": "Submitted ghost witness affidavit"
+    },
+    {
+      "source": "ellison",
+      "target": "olc_plc",
+      "type": "ownership",
+      "flow": "power",
+      "label": "Principal",
+      "source_doc": "LARA"
+    },
+    {
+      "source": "ellison",
+      "target": "quagmire",
+      "type": "ownership",
+      "flow": "power",
+      "label": "153 domains",
+      "source_doc": "LARA, WHOIS"
+    },
+    {
+      "source": "ellison",
+      "target": "foiaworks",
+      "type": "ownership",
+      "flow": "power",
+      "label": "Operates via Quagmire Solutions",
+      "source_doc": "LARA"
+    },
+    {
+      "source": "lindke",
+      "target": "ellison",
+      "type": "client",
+      "flow": "money",
+      "label": "Client — Lindke v Freed (SCOTUS)",
+      "source_doc": "PACER"
+    },
+    {
+      "source": "ellison",
+      "target": "gafkay",
+      "type": "professional",
+      "flow": "influence",
+      "label": "SVSU colleague (6yr overlap)",
+      "source_doc": "LinkedIn, MLive"
+    },
+    {
+      "source": "borrello",
+      "target": "aljouny",
+      "type": "judicial",
+      "flow": "power",
+      "label": "Signed contempt based on ghost witness, recused",
+      "source_doc": "Court docket"
+    },
+    {
+      "source": "gafkay",
+      "target": "borrello",
+      "type": "succession",
+      "flow": "power",
+      "label": "Successor judge after recusal",
+      "source_doc": "Court records"
+    },
+    {
+      "source": "ellsworth",
+      "target": "ellison",
+      "type": "professional",
+      "flow": "influence",
+      "label": "SCBA insider, family connections",
+      "source_doc": "Bar records"
+    },
+    {
+      "source": "katie_ellison",
+      "target": "ellison",
+      "type": "family",
+      "flow": "influence",
+      "label": "Married",
+      "source_doc": "Public record"
+    },
+    {
+      "source": "schipper",
+      "target": "nakfoor_pratt",
+      "type": "professional",
+      "flow": "power",
+      "label": "Judge-prosecutor partnership",
+      "source_doc": "Court records"
+    },
+    {
+      "source": "galen",
+      "target": "makoski",
+      "type": "appointment",
+      "flow": "position",
+      "label": "Campaign treasurer → magistrate",
+      "source_doc": "SoO filing, SCAO"
+    },
+    {
+      "source": "moreland",
+      "target": "agc",
+      "type": "complaint",
+      "flow": "power",
+      "label": "Complaint filed Sep 2026 (returned — separate forms required)"
+    },
+    {
+      "source": "miller",
+      "target": "jtc",
+      "type": "complaint",
+      "flow": "power",
+      "label": "Complaint filed Oct 2026"
+    },
+    {
+      "source": "banks",
+      "target": "state_bar_upl",
+      "type": "complaint",
+      "flow": "power",
+      "label": "Complaint filed (non-lawyer practicing law)"
+    },
+    {
+      "source": "ellison",
+      "target": "agc",
+      "type": "complaint",
+      "flow": "power",
+      "label": "Complaint filed (fabricated witness)"
+    },
+    {
+      "source": "schipper",
+      "target": "jtc",
+      "type": "investigation",
+      "flow": "power",
+      "label": "Active JTC investigation"
+    },
+    {
+      "source": "nakfoor_pratt",
+      "target": "agc",
+      "type": "admonishment",
+      "flow": "power",
+      "label": "Private ADB admonishment (MRPC 3.4(e))"
+    },
+    {
+      "source": "galen",
+      "target": "jtc",
+      "type": "admonition",
+      "flow": "power",
+      "label": "JTC confidential admonition"
+    },
+    {
+      "source": "v_hall",
+      "target": "ellison",
+      "type": "pattern",
+      "flow": "influence",
+      "label": "Same playbook: PPO against journalist"
+    }
   ],
-  "cross_investigation_edges": [
-    { "note": "AGC receives complaints from Detroit (Banks/Moreland), Saginaw (Ellison), and Barry (Nakfoor Pratt). Same commission, same 94% dismissal rate." },
-    { "note": "JTC receives complaints from Detroit (Miller/Yancey), Barry (Schipper), and Eastpointe (Galen). Years-long timelines, confidential proceedings." },
-    { "note": "SLAPP playbook appears in both Detroit (PPO against journalist, book analysis) and Saginaw (contempt against journalist, domain purchases in victim names)." },
-    { "note": "SCAO notified of failures in both Barry (court administration) and Detroit (charter authorization). Response: silence." }
+  "cross_investigation_notes": [
+    "AGC receives complaints from Detroit (Moreland/Perkins), Saginaw (Ellison), and Barry (Nakfoor Pratt). Same commission, 94% dismissal rate.",
+    "JTC receives complaints from Detroit (Miller/Yancey), Barry (Schipper), and Eastpointe (Galen). Years-long timelines.",
+    "SLAPP playbook appears in Detroit (PPO against journalist) AND Saginaw (contempt against journalist, domains in victim names).",
+    "Anderson localization pattern: Detroit (Banks controls school board) AND Hemlock (Ellison wife is school board president)."
   ]
 }

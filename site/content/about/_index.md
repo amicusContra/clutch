@@ -68,9 +68,60 @@ Some of us are investigative journalists. Some are parents. Some are both.
 
 ## The Name
 
-**Clutch** — when it matters most. When the system has failed. When nobody is coming to help. When citizens have to catch what the institutions drop.
+**Clutch** carries two frequencies:
 
-That's when you need to be clutch.
+### The Handbag
+The thing you grab when you're going somewhere important. Everything you need, nothing you don't. The investigation evidence, held tight, carried with purpose. Rita's frequency.
+
+### The Transmission
+The mechanical clutch — the mechanism that **engages and disengages power**. The engine (journalism) generates force. The drivetrain (evidence network) delivers it. The clutch is the engagement mechanism that decides *when* and *how* power transfers from investigation to accountability.
+
+Press the clutch — disengage. Gather evidence. Build the case. Walk the graph.
+
+Release the clutch — engage. File the complaints. Publish the findings. Hold the institutions accountable.
+
+The handbag and the transmission are the same object. Form and function. Both clutch.
+
+---
+
+## The Braid
+
+This platform is the first **fully braided** node in the evidence network. Every strand wraps around every other:
+
+```
+CONTENT ──→ GRAPH ──→ AGENTS ──→ CONTENT
+   ↑                                 │
+   │         ┌──────────────┐        │
+   └─────────│   PATRONS    │←───────┘
+             │  walk graph  │
+             │ find paths   │
+             │ pull records │
+             │ flag edges   │
+             └──────┬───────┘
+                    │
+              ACCOUNTABILITY
+                    │
+              ┌─────┴─────┐
+              │  tuebor    │ ← statewide shield
+              └─────┬──────┘
+                    │
+              ┌─────┴─────┐
+              │  justice   │ ← closed cases graduate
+              └────────────┘
+```
+
+Six strands, one braid:
+
+| Strand | What It Does | Feeds |
+|--------|-------------|-------|
+| **Content** | Markdown investigation pages | Graph, Signal |
+| **Graph** | JSON network data (109 nodes, 157 edges) | Agents, Patrons |
+| **Agents** | AI validates, cross-references, finds patterns | Content, Graph |
+| **Signal** | SEO, llms.txt, Schema.org — discovery layer | Patrons |
+| **Patrons** | Walk the graph, pull records, flag connections | Agents, Accountability |
+| **Accountability** | AGC, JTC, FOIA, IC3 filings | Content (public record) |
+
+Each strand strengthens the others. Cut one — the others carry the load. This is cross-protection at the system level, not just the site level.
 
 ---
 

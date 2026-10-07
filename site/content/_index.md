@@ -25,7 +25,7 @@ Every investigation below is sourced to public records. Every node is a person, 
 <div class="case-grid">
 
 ### ⚡ [Detroit: Cash for Kids 2](/cases/detroit/)
-**87 nodes · 120+ connections · $4.9M in public money**
+**91 nodes · 140 connections · $4.9M in public money**
 
 A convicted felon (9 convictions, 6 felony) runs two charter schools in Detroit. A sitting judge chairs his school board. An assistant attorney general serves as vice chair. The management company he controls extracts 72.67% of revenue. Students score in the bottom 3% statewide.
 
@@ -82,6 +82,19 @@ When you walk the graph, you see it: the same enforcement nodes appear in every 
 
 ---
 
+## The Transmission
+
+A **clutch** is the mechanism that engages and disengages power between the engine and the drivetrain.
+
+**The engine:** investigative journalism. Rita Williams. Clutch Justice.  
+**The drivetrain:** the evidence network. 109 nodes. 157 edges. 5 investigations. 147+ evidence pages.  
+**The clutch:** this platform. You engage it by walking.
+
+Press the clutch — disengage. Gather evidence. Build the case. Walk the graph.  
+Release the clutch — engage. File complaints. Publish findings. Hold institutions accountable.
+
+---
+
 ## How Walking Works
 
 <div class="how-it-works">
@@ -108,10 +121,10 @@ This platform is one node in a cross-protection evidence network:
 
 | Node | Focus | Pages |
 |------|-------|-------|
-| [detroit.primals.eco](https://detroit.primals.eco) | Detroit charter school racketeering | 113+ |
-| [barry.primals.eco](https://barry.primals.eco) | Barry County, Saginaw, Ellison investigations | 34+ |
+| [detroit.primals.eco](https://detroit.primals.eco) | Detroit charter school racketeering | 113+ pages · 91 nodes |
+| [barry.primals.eco](https://barry.primals.eco) | Barry County, Saginaw, Ellison investigations | 34+ pages |
 | [tuebor.primals.eco](https://tuebor.primals.eco) | Statewide Michigan accountability | Building |
-| **clutch.primals.eco** | Collaborative investigation — you are here | Live |
+| **clutch.primals.eco** | Collaborative investigation — you are here | 109 nodes · 157 edges |
 | [clutchjustice.com](https://clutchjustice.com) | Published investigative journalism | Active |
 
 SLAPP one node — the others amplify. Silence one — the network routes around it. This is by design.

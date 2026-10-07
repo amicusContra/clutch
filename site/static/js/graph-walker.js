@@ -51,53 +51,20 @@
   var graphData = { nodes: [], edges: [] };
 
   function loadGraphData() {
-    // Try loading from the unified graph API first
+    // Load the unified graph (109 nodes, 157 edges, 5 investigations)
     return fetch('/api/graph.json')
-      .then(function(r) { return r.ok ? r.json() : Promise.reject('no local API'); })
+      .then(function(r) { return r.ok ? r.json() : Promise.reject('no local graph'); })
       .catch(function() {
-        // Fallback: load from detroit.primals.eco
+        // Fallback: try detroit directly
         return fetch('https://detroit.primals.eco/graph.json')
-          .then(function(r) { return r.ok ? r.json() : Promise.reject('no detroit API'); });
+          .then(function(r) { return r.ok ? r.json() : Promise.reject('no remote graph'); });
+      })
+      .then(function(data) {
+        // Normalize: unified graph has 'edges' key, detroit graph has 'edges' key
+        return { nodes: data.nodes || [], edges: data.edges || [] };
       })
       .catch(function() {
-        // Final fallback: embedded minimal data
-        return {
-          nodes: [
-            { id: 'banks', label: 'Brian Roderick Banks', type: 'actor', tier: 1, investigation: 'detroit', url: 'https://detroit.primals.eco/network/actors/brian-banks/', detail: '9 convictions. Enterprise leader.' },
-            { id: 'holland', label: 'Joseph Holland Jr.', type: 'actor', tier: 1, investigation: 'detroit', url: 'https://detroit.primals.eco/network/actors/joseph-holland/', detail: 'Financial gatekeeper. Drug offender.' },
-            { id: 'miller', label: 'Judge Cylenthia Miller', type: 'judge', tier: 2, investigation: 'detroit', url: 'https://detroit.primals.eco/network/judges/cylenthia-miller/', detail: 'PCA Board Chair. Election Nov 2026.' },
-            { id: 'pca', label: 'Purpose Charter Academy', type: 'school', tier: 2, investigation: 'detroit', url: 'https://detroit.primals.eco/network/entities/purpose-charter-academy/', detail: 'K-8, DPSCD authorized.' },
-            { id: 'macdowell', label: 'MacDowell Prep', type: 'school', tier: 2, investigation: 'detroit', url: 'https://detroit.primals.eco/network/entities/macdowell-prep/', detail: '3% math, $4.9M revenue.' },
-            { id: 'purpose_group', label: 'Purpose Group LLC', type: 'entity', tier: 2, investigation: 'detroit', url: 'https://detroit.primals.eco/network/entities/purpose-group-llc/', detail: 'CMO, 72.67% extraction.' },
-            { id: 'yancey', label: 'Judge Tenisha Yancey', type: 'judge', tier: 2, investigation: 'detroit', url: 'https://detroit.primals.eco/network/judges/tenisha-yancey/', detail: 'Campaign paid Banks Strategy.' },
-            { id: 'moreland', label: 'Lisa Moreland', type: 'judge', tier: 2, investigation: 'detroit', detail: 'AAG → PCA Board Director.' },
-            { id: 'agc', label: 'Attorney Grievance Commission', type: 'enforcement', tier: 3, investigation: 'shared', detail: '94% dismissal rate. Same commission, every case.' },
-            { id: 'jtc', label: 'Judicial Tenure Commission', type: 'enforcement', tier: 3, investigation: 'shared', detail: 'Years-long timelines. Same commission.' },
-            { id: 'ellison', label: 'Philip L. Ellison', type: 'actor', tier: 1, investigation: 'saginaw', url: 'https://barry.primals.eco/actors/ellison/', detail: '$74K sanctions. 153 domains. Fabricated witness.' },
-            { id: 'aljouny', label: 'Samantha Aljouny', type: 'entity', tier: 1, investigation: 'saginaw', url: 'https://barry.primals.eco/evidence/ghost-witness-aljouny/', detail: 'Ghost witness. 13 convergence points.' },
-            { id: 'schipper', label: 'Judge Michael Schipper', type: 'judge', tier: 2, investigation: 'barry', url: 'https://barry.primals.eco/actors/schipper/', detail: 'Active JTC investigation.' },
-            { id: 'nakfoor_pratt', label: 'Julie Nakfoor Pratt', type: 'actor', tier: 2, investigation: 'barry', url: 'https://barry.primals.eco/actors/nakfoor-pratt/', detail: 'Private admonishment. Brady failures.' },
-            { id: 'galen', label: 'Judge Kathleen Galen', type: 'judge', tier: 2, investigation: 'eastpointe', url: 'https://barry.primals.eco/actors/galen/', detail: 'JTC admonition. Nov 2026 election.' },
-          ],
-          edges: [
-            { source: 'banks', target: 'pca', type: 'employment', flow: 'position', label: 'Superintendent' },
-            { source: 'banks', target: 'macdowell', type: 'employment', flow: 'position', label: 'Superintendent' },
-            { source: 'banks', target: 'purpose_group', type: 'ownership', flow: 'power', label: 'Sole member' },
-            { source: 'miller', target: 'pca', type: 'board', flow: 'position', label: 'Board Chair' },
-            { source: 'moreland', target: 'pca', type: 'board', flow: 'position', label: 'Board Vice Chair' },
-            { source: 'yancey', target: 'banks', type: 'payment', flow: 'money', label: '$383.82' },
-            { source: 'macdowell', target: 'purpose_group', type: 'money_flow', flow: 'money', label: '72.67% revenue' },
-            { source: 'purpose_group', target: 'banks', type: 'money_flow', flow: 'money', label: 'Management fee' },
-            { source: 'holland', target: 'banks', type: 'co-resident', flow: 'influence', label: '1968 Severn Rd' },
-            { source: 'banks', target: 'agc', type: 'complaint', flow: 'power', label: 'Complaint filed' },
-            { source: 'miller', target: 'jtc', type: 'complaint', flow: 'power', label: 'Complaint filed' },
-            { source: 'ellison', target: 'aljouny', type: 'fabrication', flow: 'influence', label: 'Submitted ghost witness' },
-            { source: 'ellison', target: 'agc', type: 'complaint', flow: 'power', label: 'Complaint filed' },
-            { source: 'schipper', target: 'jtc', type: 'investigation', flow: 'power', label: 'Active investigation' },
-            { source: 'nakfoor_pratt', target: 'agc', type: 'complaint', flow: 'power', label: 'Private admonishment' },
-            { source: 'galen', target: 'jtc', type: 'admonition', flow: 'power', label: 'JTC admonition' },
-          ]
-        };
+        return { nodes: [], edges: [] };
       });
   }
 

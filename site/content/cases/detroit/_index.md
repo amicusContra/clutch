@@ -1,14 +1,14 @@
 +++
 title = "Detroit: Cash for Kids 2"
-description = "87 documented network nodes. $4.9M in public money. A convicted felon running charter schools with a sitting judge on his board. Walk the evidence."
+description = "91 documented network nodes. $4.9M in public money. A convicted felon running charter schools with a sitting judge on his board. Walk the evidence."
 weight = 1
 sort_by = "weight"
 
 [extra]
 status = "active"
 county = "Wayne"
-node_count = 87
-edge_count = 120
+node_count = 91
+edge_count = 140
 keywords = "Detroit charter school fraud, Brian Roderick Banks convicted felon, Purpose Charter Academy, MacDowell Preparatory Academy, Judge Cylenthia Miller, Purpose Group LLC, charter school accountability Detroit, Brian Roderick Banks 9 convictions"
 
 [taxonomies]

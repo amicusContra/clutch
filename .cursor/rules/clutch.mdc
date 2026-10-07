@@ -1,0 +1,79 @@
+---
+description: Rules for working on clutch.primals.eco — collaborative investigation platform
+globs: ["**/*.md", "**/*.py", "**/*.js", "**/*.json", "**/*.toml", "**/*.html", "**/*.css"]
+alwaysApply: true
+---
+
+# Clutch Justice Platform Rules
+
+## What This Repo Is
+clutch.primals.eco is a collaborative investigation platform — the engagement mechanism between Clutch Justice journalism and the primals.eco evidence network. First fully braided system: content → graph → agents → patrons → accountability → content.
+
+## Architecture: The Transmission
+- **Engine:** Rita's journalism (clutchjustice.com)
+- **Drivetrain:** Evidence network (detroit.primals.eco, barry.primals.eco, tuebor.primals.eco)
+- **Clutch:** This platform — engages and disengages power between investigation and accountability
+- **Travelers:** Patrons/visitors walking the corruption graph, finding paths, flagging connections
+
+## The Braid (6 strands)
+1. **Content** — Zola markdown pages with TOML frontmatter
+2. **Graph** — Unified JSON graph (109 nodes, 157 edges, 5 investigations)
+3. **Agents** — AI ingestion pipeline (validate, cross-reference, PII check)
+4. **Signal** — SEO, llms.txt, Schema.org discovery layer
+5. **Patrons** — Graph walking, record pulling, connection flagging
+6. **Accountability** — AGC, JTC, FOIA, IC3 filings
+
+## Critical Privacy Constraints
+- Rita Williams' relationship to site operators is PRIVATE
+- Platform presents as Clutch Justice infrastructure — contact: hello@clutchjustice.com
+- Kevin Mok's name must NOT appear on public-facing pages. ProtonMail: eco.primal@pm.me
+- Rita's children's names must NOT be published
+- Roeiah Ahmaliah Epps-Ward must NOT be published (wronged party presumption)
+- No visitor tracking, no cookies, no identifying data
+- DO NOT share amicusContra/guerillaGorilla/fEAR/STRIDe/preSCENT operational framework
+
+## Graph Data Rules
+- Every node must have: id, label, type, tier, investigation, detail
+- Every edge must have: source, target, type, flow, label
+- Valid types: actor, judge, political, school, entity, enforcement, institutional
+- Valid flows: money, power, influence, position
+- Valid investigations: detroit, saginaw, barry, eastpointe, shared
+- Every node needs a source citation (LARA, ICHAT, PACER, etc.)
+- Run `python api/build-unified-graph.py` after graph data changes
+
+## Content Format
+- All pages use Zola TOML frontmatter (`+++` blocks)
+- Every page needs: title, description, weight
+- Every factual claim must have a source citation
+- Unsourced items go in investigation checklists as `- [ ]` items, NOT as findings
+
+## File Organization
+- Cases: `site/content/cases/<investigation>/_index.md`
+- Graph: `site/content/graph/_index.md`
+- About: `site/content/about/_index.md`
+- Contribute: `site/content/contribute/_index.md`
+- Graph data: `site/static/api/graph.json`
+- Graph walker: `site/static/js/graph-walker.js`
+- Agent spec: `agents/AGENTS.md`
+- Build scripts: `api/`
+
+## Cross-References
+- Detroit investigation: detroit.primals.eco / git.primals.eco/publicRecord/detroit
+- Barry investigation: barry.primals.eco
+- Statewide shield: tuebor.primals.eco
+- Published journalism: clutchjustice.com
+- Justice (closed cases): justice.primals.eco (future)
+
+## Upstream Data Sources
+- Detroit graph: `../publicRecord-detroit/site/static/graph.json` (91 nodes, 140 edges)
+- Barry actors: `../publicRecord-barry/site/content/actors/*.md`
+- CaseDB: `../bluegate-tenancy/caseDB/` (SQL updates)
+
+## Commit Messages
+Descriptive. Name what was added, what investigations are affected, what sources were used. Example:
+```
+Add Ellison entity network nodes: OLC PLC, Quagmire Solutions, FOIAworks
+
+Sources: LARA, WHOIS, barry.primals.eco actor pages
+Investigations affected: saginaw, shared (AGC cross-reference)
+```
