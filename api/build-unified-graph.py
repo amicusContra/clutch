@@ -203,6 +203,62 @@ def build_shared_nodes():
     ]
 
 
+def build_natural_hit_nodes():
+    """Nodes discovered via natural-hit training scan Oct 7 2026."""
+    return [
+        {
+            'id': 'fiore', 'label': 'Gasper Fiore', 'type': 'actor', 'tier': 3,
+            'investigation': 'detroit',
+            'detail': '"Baron of Bribery." 21mo federal prison — bribed Clinton Twp trustee ($7K). Also bribed Kilpatrick, DPD Deputy Chief Washington ($3K), Conyers. Donated $500 to Perkins mayoral campaign.'
+        },
+        {
+            'id': 'knox', 'label': 'Keenann Knox', 'type': 'actor', 'tier': 3,
+            'investigation': 'detroit',
+            'detail': 'Impact Church pastor. SDJ/Detroit Leaders president. Our Neighborhoods First officer. Former Detroit Board of Ethics. Lives St. Clair Shores.'
+        },
+        {
+            'id': 'wilk', 'label': 'W. Alan Wilk', 'type': 'actor', 'tier': 3,
+            'investigation': 'detroit',
+            'detail': 'Dykema attorney. Filed paperwork for SDJ AND Our Neighborhoods First. Duggan campaign lawyer.'
+        },
+        {
+            'id': 'carol_banks', 'label': 'Carol Banks', 'type': 'actor', 'tier': 2,
+            'investigation': 'detroit',
+            'detail': 'Eastside Slate operator. Home raided by FBI. SDJ paid her $18K+ in unspecified reimbursements. Under federal investigation.'
+        },
+        {
+            'id': 'onf', 'label': 'Our Neighborhoods First', 'type': 'entity', 'tier': 3,
+            'investigation': 'detroit',
+            'detail': 'Dark money nonprofit. Led by Duggan appointees. Attack ads. Prop N bond campaign. Website via Domains By Proxy.'
+        },
+        {
+            'id': 'd_mitchell', 'label': 'Damian Mitchell', 'type': 'actor', 'tier': 3,
+            'investigation': 'detroit',
+            'detail': 'SDJ treasurer. Ran for Board of Police Commissioners Dist 3 (2021). Endorsed by Eastside Slate (Carol Banks). Knows Banks personally.'
+        },
+    ]
+
+
+def build_natural_hit_edges():
+    """Edges discovered via natural-hit training scan Oct 7 2026."""
+    return [
+        # Perkins ↔ Gay-Dagnogo reciprocal
+        { 'source': 'gay_dagnogo', 'target': 'todd_perkins', 'type': 'donation', 'flow': 'money', 'label': '$750 to Perkins mayoral campaign (2025)', 'source_doc': 'Crain\'s Detroit Business', 'amount': 750 },
+        { 'source': 'todd_perkins', 'target': 'gay_dagnogo', 'type': 'donation', 'flow': 'money', 'label': '$500 to Gay-Dagnogo Strong Women Lead PAC', 'source_doc': 'TransparencyUSA', 'amount': 500 },
+        # Fiore → Perkins
+        { 'source': 'fiore', 'target': 'todd_perkins', 'type': 'donation', 'flow': 'money', 'label': '$500 to Perkins mayoral campaign', 'source_doc': 'Crain\'s Detroit Business', 'amount': 500 },
+        # SDJ deep structure
+        { 'source': 'knox', 'target': 'sdj', 'type': 'governance', 'flow': 'power', 'label': 'President of SDJ/Detroit Leaders', 'source_doc': 'Deadline Detroit' },
+        { 'source': 'knox', 'target': 'onf', 'type': 'governance', 'flow': 'power', 'label': 'Officer of Our Neighborhoods First', 'source_doc': 'Deadline Detroit' },
+        { 'source': 'wilk', 'target': 'sdj', 'type': 'formation', 'flow': 'power', 'label': 'Filed SDJ paperwork (Dykema attorney)', 'source_doc': 'Deadline Detroit' },
+        { 'source': 'wilk', 'target': 'onf', 'type': 'formation', 'flow': 'power', 'label': 'Filed ONF paperwork (Dykema attorney)', 'source_doc': 'Deadline Detroit' },
+        { 'source': 'wilk', 'target': 'dykema', 'type': 'employment', 'flow': 'power', 'label': 'Dykema attorney', 'source_doc': 'Deadline Detroit' },
+        { 'source': 'sdj', 'target': 'carol_banks', 'type': 'payment', 'flow': 'money', 'label': '$18K+ unspecified reimbursements', 'source_doc': 'Deadline Detroit', 'amount': 18000 },
+        { 'source': 'd_mitchell', 'target': 'sdj', 'type': 'governance', 'flow': 'power', 'label': 'Treasurer', 'source_doc': 'ProPublica 990' },
+        { 'source': 'd_mitchell', 'target': 'banks', 'type': 'connection', 'flow': 'influence', 'label': 'Personal connection through SDJ', 'source_doc': 'Deadline Detroit' },
+    ]
+
+
 def build_mi7_nodes():
     """MI-7 Congressional District — Barrett/Lawrence signal scan nodes."""
     return [
@@ -280,6 +336,10 @@ def build_unified_graph():
     mi7_nodes = build_mi7_nodes()
     mi7_edges = build_mi7_edges()
 
+    # Natural hits (training subsystem discoveries)
+    nat_nodes = build_natural_hit_nodes()
+    nat_edges = build_natural_hit_edges()
+
     # Shared enforcement
     shared_nodes = build_shared_nodes()
     cross_edges = build_cross_investigation_edges()
@@ -303,6 +363,11 @@ def build_unified_graph():
             all_nodes.append(n)
             all_node_ids.add(n['id'])
 
+    for n in nat_nodes:
+        if n['id'] not in all_node_ids:
+            all_nodes.append(n)
+            all_node_ids.add(n['id'])
+
     for n in shared_nodes:
         if n['id'] not in all_node_ids:
             all_nodes.append(n)
@@ -312,7 +377,7 @@ def build_unified_graph():
     edge_keys = set()
     all_edges = []
 
-    for edges_list in [detroit_edges, barry_edges, mi7_edges, cross_edges]:
+    for edges_list in [detroit_edges, barry_edges, mi7_edges, nat_edges, cross_edges]:
         for e in edges_list:
             key = (e['source'], e['target'], e.get('type', ''))
             if key not in edge_keys and e['source'] in all_node_ids and e['target'] in all_node_ids:
@@ -379,6 +444,10 @@ def build_unified_graph():
             'Anderson localization pattern: Detroit (Banks controls school board) AND Hemlock (Ellison wife is school board president).',
             'Dykema Gossett bridge: formed SDJ (Detroit dark money) AND donated $4K to Barrett (MI-7). Same firm, both sides.',
             'Weaponized criminal record pattern: Detroit (Banks IS felon, institutions protect) AND MI-7 (Barrett CALLS opponents felons, weaponizes expunged records).',
+            'Convicted Felon Inversion: Barrett smears Lawrence as "convicted felon" (expunged). Banks network employs actual convicted felons: Daniels (drug money, 1yr federal), Holland (cocaine MDOC #443789), Fiore (bribery, 21mo federal).',
+            'Perkins ↔ Gay-Dagnogo reciprocal donations: Banks attorney funds charter authorizer\'s PAC, charter authorizer funds Banks attorney\'s mayoral campaign. $1,250 total exchanged.',
+            'Dykema 30-year arc: authored charter school law (1993 PA 362) → defended it at MSC → formed SDJ dark money for Banks → donated $4K to Barrett. The firm that built the system protects the corruption.',
+            'SDJ deep structure: Dykema attorney (Wilk) filed paperwork, Dykema employee (Moore) is asst secretary. Same firm, same people, dark money and lobbying.',
         ],
     }
 
