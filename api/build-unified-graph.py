@@ -203,6 +203,50 @@ def build_shared_nodes():
     ]
 
 
+def build_mi7_nodes():
+    """MI-7 Congressional District — Barrett/Lawrence signal scan nodes."""
+    return [
+        {
+            'id': 'barrett', 'label': 'Rep. Tom Barrett', 'type': 'political', 'tier': 2,
+            'investigation': 'mi7',
+            'detail': 'U.S. Rep MI-7 (R-Charlotte). "Convicted felon" smear. Wrong-date voter suppression ad. $1.48M PAC money.'
+        },
+        {
+            'id': 'lawrence', 'label': 'Will Lawrence', 'type': 'actor', 'tier': 2,
+            'investigation': 'mi7',
+            'detail': 'Dem challenger. Co-founder Sunrise Movement + MI RITDH. Expunged 2013 pipeline protest conviction.'
+        },
+        {
+            'id': 'ritdh', 'label': 'MI Rent Is Too Damn High', 'type': 'entity', 'tier': 3,
+            'investigation': 'mi7',
+            'detail': 'Statewide tenant rights coalition. Founded 2023. 350+ at first demo. Building unionization.'
+        },
+        {
+            'id': 'roe_strategic', 'label': 'Roe Strategic', 'type': 'entity', 'tier': 3,
+            'investigation': 'mi7',
+            'detail': 'Barrett campaign strategist. Bloomfield Hills. $364,986 paid. Jason Roe spokesperson.'
+        },
+        {
+            'id': 'musk_pac', 'label': 'Musk Super PAC', 'type': 'entity', 'tier': 3,
+            'investigation': 'mi7',
+            'detail': '$869,400 supporting Barrett in 2024. Elon Musk affiliated.'
+        },
+    ]
+
+
+def build_mi7_edges():
+    """MI-7 investigation edges — including Dykema cross-investigation bridge."""
+    return [
+        { 'source': 'barrett', 'target': 'lawrence', 'type': 'attack', 'flow': 'influence', 'label': 'Called "convicted felon" (expunged record)', 'source_doc': 'MLive Aug 2026' },
+        { 'source': 'lawrence', 'target': 'ritdh', 'type': 'governance', 'flow': 'influence', 'label': 'Co-founder + coalition coordinator', 'source_doc': 'mirentistoodamnhigh.com' },
+        { 'source': 'barrett', 'target': 'roe_strategic', 'type': 'payment', 'flow': 'money', 'label': '$364,986 campaign strategist', 'source_doc': 'FEC' },
+        { 'source': 'musk_pac', 'target': 'barrett', 'type': 'payment', 'flow': 'money', 'label': '$869,400 (2024)', 'source_doc': 'OpenSecrets' },
+        # THE BRIDGE EDGE — Dykema connects detroit to mi7
+        { 'source': 'dykema', 'target': 'barrett', 'type': 'payment', 'flow': 'money', 'label': '$4,000 Dykema Gossett Federal PAC (Jun 2026)', 'source_doc': 'FEC Schedule A 11C' },
+        # Dykema already connected to SDJ in detroit edges (dykema → sdj formation)
+    ]
+
+
 def build_cross_investigation_edges():
     """Edges connecting investigations through shared enforcement nodes."""
     edges = [
@@ -232,6 +276,10 @@ def build_unified_graph():
     barry_nodes = build_barry_nodes()
     barry_edges = build_barry_edges()
 
+    # Build MI-7
+    mi7_nodes = build_mi7_nodes()
+    mi7_edges = build_mi7_edges()
+
     # Shared enforcement
     shared_nodes = build_shared_nodes()
     cross_edges = build_cross_investigation_edges()
@@ -250,6 +298,11 @@ def build_unified_graph():
             all_nodes.append(n)
             all_node_ids.add(n['id'])
 
+    for n in mi7_nodes:
+        if n['id'] not in all_node_ids:
+            all_nodes.append(n)
+            all_node_ids.add(n['id'])
+
     for n in shared_nodes:
         if n['id'] not in all_node_ids:
             all_nodes.append(n)
@@ -259,7 +312,7 @@ def build_unified_graph():
     edge_keys = set()
     all_edges = []
 
-    for edges_list in [detroit_edges, barry_edges, cross_edges]:
+    for edges_list in [detroit_edges, barry_edges, mi7_edges, cross_edges]:
         for e in edges_list:
             key = (e['source'], e['target'], e.get('type', ''))
             if key not in edge_keys and e['source'] in all_node_ids and e['target'] in all_node_ids:
@@ -291,6 +344,12 @@ def build_unified_graph():
             'status': 'tracking',
             'county': 'Macomb',
         },
+        'mi7': {
+            'label': 'MI-7: Barrett vs. Lawrence',
+            'status': 'scanning',
+            'county': 'Ingham',
+            'note': 'Signal scan initiated Oct 7 2026. Dykema Gossett bridge edge to Detroit.',
+        },
         'shared': {
             'label': 'Cross-Investigation Enforcement',
             'status': 'active',
@@ -318,6 +377,8 @@ def build_unified_graph():
             'JTC receives complaints from Detroit (Miller/Yancey), Barry (Schipper), and Eastpointe (Galen). Years-long timelines.',
             'SLAPP playbook appears in Detroit (PPO against journalist) AND Saginaw (contempt against journalist, domains in victim names).',
             'Anderson localization pattern: Detroit (Banks controls school board) AND Hemlock (Ellison wife is school board president).',
+            'Dykema Gossett bridge: formed SDJ (Detroit dark money) AND donated $4K to Barrett (MI-7). Same firm, both sides.',
+            'Weaponized criminal record pattern: Detroit (Banks IS felon, institutions protect) AND MI-7 (Barrett CALLS opponents felons, weaponizes expunged records).',
         ],
     }
 
