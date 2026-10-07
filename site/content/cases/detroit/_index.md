@@ -7,8 +7,8 @@ sort_by = "weight"
 [extra]
 status = "active"
 county = "Wayne"
-node_count = 91
-edge_count = 140
+node_count = 95
+edge_count = 155
 keywords = "Detroit charter school fraud, Brian Roderick Banks convicted felon, Purpose Charter Academy, MacDowell Preparatory Academy, Judge Cylenthia Miller, Purpose Group LLC, charter school accountability Detroit, Brian Roderick Banks 9 convictions"
 
 [taxonomies]
@@ -60,6 +60,18 @@ Every entity below is documented from LARA filings, court records, campaign fina
 
 ### Full Evidence Library
 
-**113+ pages** of sourced evidence at [detroit.primals.eco](https://detroit.primals.eco)
+**114+ pages** of sourced evidence at [detroit.primals.eco](https://detroit.primals.eco)
+
+### Natural Hit Discoveries (Oct 7)
+
+| Discovery | Significance |
+|-----------|-------------|
+| Todd Perkins ran for Mayor (2025) | Banks' attorney sought executive power in the same city |
+| Gay-Dagnogo ↔ Perkins reciprocal ($1,250) | Charter authorizer and Banks' attorney funding each other |
+| Gasper Fiore → Perkins ($500) | Convicted briber donating to Banks' attorney |
+| Dykema authored charter law (1993) | Same firm that built the system protects the corruption |
+| Daniels = convicted felon (SDJ president) | $21M drug ring money launderer runs dark money vehicle |
+
+Full analysis: [Natural Hit Network](https://detroit.primals.eco/analysis/natural-hit-network/)
 
 Every page is verified against public records. Clone the git repository and audit it yourself.

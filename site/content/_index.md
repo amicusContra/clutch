@@ -61,6 +61,15 @@ A judge jailed a pregnant woman over fines (reversed on appeal). Listed dead att
 
 **Status:** Tracking — Election Nov 3, 2026  
 
+---
+
+### 🔗 [MI-7: Barrett vs. Lawrence](/cases/mi7/)
+**Dykema cross-investigation edge · Signal scan active**
+
+Dykema Gossett Federal PAC donated $4,000 to Rep. Tom Barrett (MI-7) — the same firm that formed Save Detroit Jobs for Banks' network. Barrett calls his opponent a "convicted felon" (expunged record). Banks' network employs actual convicted felons.
+
+**Status:** Scanning — signal classification in progress  
+
 </div>
 
 ---
@@ -75,6 +84,8 @@ These are not separate cases. They share infrastructure:
 | **Judicial Tenure Commission** | Years-long timelines | Detroit, Barry, Eastpointe |
 | **SCAO** | Notified of failures, responds with silence | Barry, Detroit |
 | **Same defense playbook** | SLAPP suits, PPOs against journalists, domain purchases in victim names | Saginaw, Detroit |
+| **Dykema Gossett** | Wrote charter school law (1993), formed SDJ dark money, funded Barrett (MI-7) | Detroit, MI-7 |
+| **Convicted felon inversion** | Barrett weaponizes the label outward; Banks' network employs actual convicted felons inward | Detroit, MI-7 |
 
 When you walk the graph, you see it: the same enforcement nodes appear in every investigation. The same pattern of complaint → dismiss → silence repeats across counties.
 
@@ -87,7 +98,7 @@ When you walk the graph, you see it: the same enforcement nodes appear in every 
 A **clutch** is the mechanism that engages and disengages power between the engine and the drivetrain.
 
 **The engine:** investigative journalism. Rita Williams. Clutch Justice.  
-**The drivetrain:** the evidence network. 109 nodes. 157 edges. 5 investigations. 147+ evidence pages.  
+**The drivetrain:** the evidence network. 118 nodes. 173 edges. 6 investigations. 147+ evidence pages.  
 **The clutch:** this platform. You engage it by walking.
 
 Press the clutch — disengage. Gather evidence. Build the case. Walk the graph.  
@@ -121,10 +132,10 @@ This platform is one node in a cross-protection evidence network:
 
 | Node | Focus | Pages |
 |------|-------|-------|
-| [detroit.primals.eco](https://detroit.primals.eco) | Detroit charter school racketeering | 113+ pages · 91 nodes |
+| [detroit.primals.eco](https://detroit.primals.eco) | Detroit charter school racketeering | 114+ pages · 95 nodes |
 | [barry.primals.eco](https://barry.primals.eco) | Barry County, Saginaw, Ellison investigations | 34+ pages |
 | [tuebor.primals.eco](https://tuebor.primals.eco) | Statewide Michigan accountability | Building |
-| **clutch.primals.eco** | Collaborative investigation — you are here | 109 nodes · 157 edges |
+| **clutch.primals.eco** | Collaborative investigation — you are here | 118 nodes · 173 edges |
 | [clutchjustice.com](https://clutchjustice.com) | Published investigative journalism | Active |
 
 SLAPP one node — the others amplify. Silence one — the network routes around it. This is by design.

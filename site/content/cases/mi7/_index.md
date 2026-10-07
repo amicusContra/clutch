@@ -129,19 +129,55 @@ Barrett's "convicted felon" messaging was amplified on Facebook (per DeSea's exp
 
 ---
 
+## CONVICTED FELON INVERSION (Oct 7 2026 Natural Hit Scan)
+
+Barrett weaponizes the label "convicted felon" against Will Lawrence.
+Lawrence's conviction: 2013 pipeline protest. **EXPUNGED** under
+Michigan Clean Slate Act (MCL 780.621 et seq.).
+
+The network Barrett is connected to through Dykema Gossett employs
+**actual convicted felons**:
+
+| Name | Network Role | Conviction | Source |
+|------|-------------|-----------|--------|
+| Kenneth Daniels | SDJ President | 1yr federal — $19K structured for $21M drug ring | [Freep Sep 2014](https://www.freep.com/story/news/local/michigan/detroit/2014/09/18/kenneth-daniels-sentenced/15855253/) |
+| Joseph Holland Jr. | Purpose Foundation Treasurer | Cocaine dealing (MDOC #443789) | ICHAT, LARA |
+| Gasper Fiore | Perkins campaign donor | 21mo federal — serial political bribery | [Freep Aug 2018](https://www.freep.com/story/news/local/michigan/detroit/2018/08/02/gasper-fiore-sentenced-prison-bribery/889633002/) |
+| Venus Coleman | Banks Senate payee ($7,350) | Drug money laundering | PACER 2:91-cr-80936 |
+
+**The label is projection.** Barrett deploys the word outward while
+the convicted felons travel inward through the Dykema-connected network.
+
+## DYKEMA 30-YEAR ARC
+
+| Year | Action | Source |
+|------|--------|--------|
+| 1993 | Authored charter school law (PA 362) | [Founders Library](https://charterlibrary.org/timeline/michigan/) |
+| 1997 | Defended charter law at MSC (won) | [455 Mich 557](https://law.justia.com/cases/michigan/supreme-court/1997/106092-1.html) |
+| 2016 | Formed SDJ dark money vehicle for Banks | LARA 802002459 |
+| 2021 | Wilk (Dykema attorney) filed Detroit Leaders paperwork | [Deadline Detroit](https://www.deadlinedetroit.com/articles/28989/duggan-tied_dark_money_groups_push_four_detroit_city_council_candidates) |
+| 2026 | Dykema PAC donates $4,000 to Barrett | FEC Schedule A 11C |
+
+The firm that created Michigan's charter school system is the firm
+that protects the corruption within it and funds the candidate who
+weaponizes "convicted felon" against his opponent.
+
+---
+
 ## NEXT STEPS
 
 - [ ] Pull full FEC Schedule A for Barrett 2026 — map all PAC donors
 - [ ] Cross-reference Barrett PAC donors against detroit.primals.eco entity registry
 - [ ] Check Meta Ad Library for Barrett "convicted felon" ads
-- [ ] Interview DeSea — timeline, specific posts, impact documentation
 - [ ] Map RITDH organizational structure — who beyond Will and Abdul?
 - [ ] Check TransparencyUSA for Barrett state-level campaign finance (MI Senate/House era)
 - [ ] LARA search: any Barrett-connected entities?
 - [ ] Dykema Gossett deep dive — how many races do they fund? Pattern analysis.
+- [ ] Check Moroun/Schostak PACs for Barrett donations (SDJ donors → Barrett donors?)
+- [ ] Perkins judicial donation recipients — do any have Banks cases?
 
 ---
 
-*Initial signal scan. Not yet verified to evidence standard.*
-*Source material: web search, FEC filings, published reporting.*
+*Signal scan with natural-hit training methodology. Oct 7 2026.*
+*Source material: web search, FEC filings, TransparencyUSA, published reporting.*
 *Cross-referenced against detroit.primals.eco investigation data.*

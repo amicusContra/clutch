@@ -30,9 +30,10 @@ This graph combines nodes from every active investigation. Each node is a person
 |-------|------|---------|
 | 🔴 Red | Enterprise principals | Brian Roderick Banks, Joseph Holland Jr. |
 | 🟡 Yellow | Judicial cover | Judge Miller, Judge Yancey, Judge Schipper |
-| 🟣 Purple | Political enablers | Gay-Dagnogo, Stallworth, Sheffield |
-| 🔵 Blue | Schools / Entities | PCA, MacDowell, Banks Strategy LLC |
-| ⚪ Gray | Institutions | AGC, JTC, SCAO, MDE, CMU |
+| 🟣 Purple | Political enablers | Gay-Dagnogo, Sheffield, Barrett |
+| 🔵 Blue | Schools / Entities | PCA, MacDowell, SDJ, ONF |
+| 🟠 Orange | MI-7 / Enforcement | Barrett, Lawrence, AGC, JTC, SCAO |
+| ⚪ Gray | Dark money / support | Dykema, Fiore, Knox, Wilk |
 
 ### Edge Types
 
@@ -55,6 +56,8 @@ The most important nodes are the ones that appear in multiple investigations:
 | **JTC** | Detroit, Barry, Eastpointe | Years-long timelines, confidential proceedings, same results |
 | **SCAO** | Barry, Detroit | Notified of structural failures, silence |
 | **SLAPP playbook** | Saginaw, Detroit | PPOs against journalists, domain registrations targeting victims |
+| **Dykema Gossett** | Detroit, MI-7 | Formed SDJ dark money (Detroit) + donated $4K to Barrett (MI-7). Authored charter school law (1993). |
+| **Convicted felon inversion** | Detroit, MI-7 | Barrett weaponizes "felon" label against Lawrence (expunged). Banks network employs actual convicted felons (Daniels, Holland, Fiore). |
 
 When you see a node connecting two investigations that shouldn't be related — that's a finding. Flag it.
 

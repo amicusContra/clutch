@@ -1,5 +1,5 @@
 {
-  "_generated": "2026-10-07T20:02:42Z",
+  "_generated": "2026-10-07T22:35:24Z",
   "_source": "clutch-primals build-unified-graph.py — merged from detroit + barry + shared",
   "_schema_version": "1.0",
   "investigations": {
@@ -8,7 +8,7 @@
       "status": "active",
       "county": "Wayne",
       "evidence_url": "https://detroit.primals.eco",
-      "node_count": 91
+      "node_count": 95
     },
     "saginaw": {
       "label": "Ghost Witness: Aljouny Fabrication",
@@ -29,6 +29,13 @@
       "status": "tracking",
       "county": "Macomb",
       "node_count": 2
+    },
+    "mi7": {
+      "label": "MI-7: Barrett vs. Lawrence",
+      "status": "scanning",
+      "county": "Ingham",
+      "note": "Signal scan initiated Oct 7 2026. Dykema Gossett bridge edge to Detroit.",
+      "node_count": 5
     },
     "shared": {
       "label": "Cross-Investigation Enforcement",
@@ -915,6 +922,78 @@
       "tier": 3,
       "investigation": "saginaw",
       "detail": "Hemlock School Board President. Philip Ellison wife. Anderson localization anchor."
+    },
+    {
+      "id": "barrett",
+      "label": "Rep. Tom Barrett",
+      "type": "political",
+      "tier": 2,
+      "investigation": "mi7",
+      "detail": "U.S. Rep MI-7 (R-Charlotte). \"Convicted felon\" smear. Wrong-date voter suppression ad. $1.48M PAC money."
+    },
+    {
+      "id": "lawrence",
+      "label": "Will Lawrence",
+      "type": "actor",
+      "tier": 2,
+      "investigation": "mi7",
+      "detail": "Dem challenger. Co-founder Sunrise Movement + MI RITDH. Expunged 2013 pipeline protest conviction."
+    },
+    {
+      "id": "ritdh",
+      "label": "MI Rent Is Too Damn High",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "mi7",
+      "detail": "Statewide tenant rights coalition. Founded 2023. 350+ at first demo. Building unionization."
+    },
+    {
+      "id": "roe_strategic",
+      "label": "Roe Strategic",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "mi7",
+      "detail": "Barrett campaign strategist. Bloomfield Hills. $364,986 paid. Jason Roe spokesperson."
+    },
+    {
+      "id": "musk_pac",
+      "label": "Musk Super PAC",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "mi7",
+      "detail": "$869,400 supporting Barrett in 2024. Elon Musk affiliated."
+    },
+    {
+      "id": "knox",
+      "label": "Keenann Knox",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Impact Church pastor. SDJ/Detroit Leaders president. Our Neighborhoods First officer. Former Detroit Board of Ethics. Lives St. Clair Shores."
+    },
+    {
+      "id": "wilk",
+      "label": "W. Alan Wilk",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Dykema attorney. Filed paperwork for SDJ AND Our Neighborhoods First. Duggan campaign lawyer."
+    },
+    {
+      "id": "onf",
+      "label": "Our Neighborhoods First",
+      "type": "entity",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "Dark money nonprofit. Led by Duggan appointees. Attack ads. Prop N bond campaign. Website via Domains By Proxy."
+    },
+    {
+      "id": "d_mitchell",
+      "label": "Damian Mitchell",
+      "type": "actor",
+      "tier": 3,
+      "investigation": "detroit",
+      "detail": "SDJ treasurer. Ran for Board of Police Commissioners Dist 3 (2021). Endorsed by Eastside Slate (Carol Banks). Knows Banks personally."
     },
     {
       "id": "agc",
@@ -2061,6 +2140,138 @@
       "source_doc": "SoO filing, SCAO"
     },
     {
+      "source": "barrett",
+      "target": "lawrence",
+      "type": "attack",
+      "flow": "influence",
+      "label": "Called \"convicted felon\" (expunged record)",
+      "source_doc": "MLive Aug 2026"
+    },
+    {
+      "source": "lawrence",
+      "target": "ritdh",
+      "type": "governance",
+      "flow": "influence",
+      "label": "Co-founder + coalition coordinator",
+      "source_doc": "mirentistoodamnhigh.com"
+    },
+    {
+      "source": "barrett",
+      "target": "roe_strategic",
+      "type": "payment",
+      "flow": "money",
+      "label": "$364,986 campaign strategist",
+      "source_doc": "FEC"
+    },
+    {
+      "source": "musk_pac",
+      "target": "barrett",
+      "type": "payment",
+      "flow": "money",
+      "label": "$869,400 (2024)",
+      "source_doc": "OpenSecrets"
+    },
+    {
+      "source": "dykema",
+      "target": "barrett",
+      "type": "payment",
+      "flow": "money",
+      "label": "$4,000 Dykema Gossett Federal PAC (Jun 2026)",
+      "source_doc": "FEC Schedule A 11C"
+    },
+    {
+      "source": "gay_dagnogo",
+      "target": "todd_perkins",
+      "type": "donation",
+      "flow": "money",
+      "label": "$750 to Perkins mayoral campaign (2025)",
+      "source_doc": "Crain's Detroit Business",
+      "amount": 750
+    },
+    {
+      "source": "todd_perkins",
+      "target": "gay_dagnogo",
+      "type": "donation",
+      "flow": "money",
+      "label": "$500 to Gay-Dagnogo Strong Women Lead PAC",
+      "source_doc": "TransparencyUSA",
+      "amount": 500
+    },
+    {
+      "source": "fiore",
+      "target": "todd_perkins",
+      "type": "donation",
+      "flow": "money",
+      "label": "$500 to Perkins mayoral campaign",
+      "source_doc": "Crain's Detroit Business",
+      "amount": 500
+    },
+    {
+      "source": "knox",
+      "target": "sdj",
+      "type": "governance",
+      "flow": "power",
+      "label": "President of SDJ/Detroit Leaders",
+      "source_doc": "Deadline Detroit"
+    },
+    {
+      "source": "knox",
+      "target": "onf",
+      "type": "governance",
+      "flow": "power",
+      "label": "Officer of Our Neighborhoods First",
+      "source_doc": "Deadline Detroit"
+    },
+    {
+      "source": "wilk",
+      "target": "sdj",
+      "type": "formation",
+      "flow": "power",
+      "label": "Filed SDJ paperwork (Dykema attorney)",
+      "source_doc": "Deadline Detroit"
+    },
+    {
+      "source": "wilk",
+      "target": "onf",
+      "type": "formation",
+      "flow": "power",
+      "label": "Filed ONF paperwork (Dykema attorney)",
+      "source_doc": "Deadline Detroit"
+    },
+    {
+      "source": "wilk",
+      "target": "dykema",
+      "type": "employment",
+      "flow": "power",
+      "label": "Dykema attorney",
+      "source_doc": "Deadline Detroit"
+    },
+    {
+      "source": "sdj",
+      "target": "carol_banks",
+      "type": "payment",
+      "flow": "money",
+      "label": "$18K+ unspecified reimbursements",
+      "source_doc": "Deadline Detroit",
+      "amount": 18000
+    },
+    {
+      "source": "d_mitchell",
+      "target": "sdj",
+      "type": "governance",
+      "flow": "power",
+      "label": "Treasurer",
+      "source_doc": "ProPublica 990"
+    },
+    {
+      "source": "d_mitchell",
+      "target": "banks",
+      "type": "connection",
+      "flow": "influence",
+      "label": "Personal connection through SDJ",
+      "source_doc": "Deadline Detroit"
+    },
+    {
       "source": "moreland",
       "target": "agc",
       "type": "complaint",
@@ -2121,6 +2332,12 @@
     "AGC receives complaints from Detroit (Moreland/Perkins), Saginaw (Ellison), and Barry (Nakfoor Pratt). Same commission, 94% dismissal rate.",
     "JTC receives complaints from Detroit (Miller/Yancey), Barry (Schipper), and Eastpointe (Galen). Years-long timelines.",
     "SLAPP playbook appears in Detroit (PPO against journalist) AND Saginaw (contempt against journalist, domains in victim names).",
-    "Anderson localization pattern: Detroit (Banks controls school board) AND Hemlock (Ellison wife is school board president)."
+    "Anderson localization pattern: Detroit (Banks controls school board) AND Hemlock (Ellison wife is school board president).",
+    "Dykema Gossett bridge: formed SDJ (Detroit dark money) AND donated $4K to Barrett (MI-7). Same firm, both sides.",
+    "Weaponized criminal record pattern: Detroit (Banks IS felon, institutions protect) AND MI-7 (Barrett CALLS opponents felons, weaponizes expunged records).",
+    "Convicted Felon Inversion: Barrett smears Lawrence as \"convicted felon\" (expunged). Banks network employs actual convicted felons: Daniels (drug money, 1yr federal), Holland (cocaine MDOC #443789), Fiore (bribery, 21mo federal).",
+    "Perkins ↔ Gay-Dagnogo reciprocal donations: Banks attorney funds charter authorizer's PAC, charter authorizer funds Banks attorney's mayoral campaign. $1,250 total exchanged.",
+    "Dykema 30-year arc: authored charter school law (1993 PA 362) → defended it at MSC → formed SDJ dark money for Banks → donated $4K to Barrett. The firm that built the system protects the corruption.",
+    "SDJ deep structure: Dykema attorney (Wilk) filed paperwork, Dykema employee (Moore) is asst secretary. Same firm, same people, dark money and lobbying."
   ]
 }
