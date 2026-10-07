@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }} — {{ config.title }}{% endblock title %}
+{% block description %}{{ section.description }}{% endblock description %}
+
+{% block content %}
+<article class="page-content">
+  <header class="page-header">
+    <h1>{{ section.title }}</h1>
+    {% if section.description %}
+    <p class="page-desc">{{ section.description }}</p>
+    {% endif %}
+  </header>
+  <div class="content">
+    {{ section.content | safe }}
+  </div>
+
+  {% if section.subsections | length > 0 %}
+  <div class="subsections">
+    {% for subsection_path in section.subsections %}
+      {% set subsection = get_section(path=subsection_path) %}
+      <a href="{{ subsection.permalink }}" class="subsection-card">
+        <h3>{{ subsection.title }}</h3>
+        <p>{{ subsection.description | default(value="") }}</p>
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if section.pages | length > 0 %}
+  <div class="page-list">
+    {% for page in section.pages %}
+      <a href="{{ page.permalink }}" class="page-card">
+        <h3>{{ page.title }}</h3>
+        <p>{{ page.description | default(value="") }}</p>
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>
+{% endblock content %}

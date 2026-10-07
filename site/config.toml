@@ -1,0 +1,115 @@
+base_url = "https://clutch.primals.eco"
+title = "Clutch Justice — Walk the Case"
+description = "Collaborative investigation platform. Follow the evidence. Walk the network. Help solve cases that Michigan's institutions won't touch. Every fact sourced. Every connection documented. Every visitor is an investigator."
+compile_sass = false
+build_search_index = true
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+generate_sitemap = true
+minify_html = true
+
+[link_checker]
+external_level = "warn"
+skip_prefixes = [
+    "https://mibusinessregistry.lara.state.mi.us",
+    "https://apps.michigan.gov/ichat",
+    "https://cfrs.michigan.gov",
+    "https://mdocweb.state.mi.us",
+    "https://courts.waynecounty.com",
+    "https://clerk.waynecounty.com",
+    "https://wayne.county-taxes.com",
+    "https://eu.freep.com",
+    "https://www.freep.com",
+    "https://www.detroitnews.com",
+    "https://www.michbar.org",
+    "https://www.usnews.com",
+    "https://www.jams.com",
+]
+
+# ── Taxonomies ────────────────────────────────────────────────────────
+[[taxonomies]]
+name = "actors"
+feed = true
+
+[[taxonomies]]
+name = "entities"
+feed = true
+
+[[taxonomies]]
+name = "counties"
+feed = true
+
+[[taxonomies]]
+name = "status"
+
+[markdown]
+smart_punctuation = true
+
+[markdown.highlighting]
+enabled = true
+light_theme = "github-light"
+dark_theme = "github-dark"
+
+[search]
+include_title = true
+include_description = true
+include_content = true
+
+[extra]
+author = "Clutch Justice"
+contact_email = "hello@clutchjustice.com"
+parent_url = "https://clutchjustice.com"
+detroit_url = "https://detroit.primals.eco"
+barry_url = "https://barry.primals.eco"
+tuebor_url = "https://tuebor.primals.eco"
+
+# ── Investigation Registry ────────────────────────────────────────────
+# Active investigations that patrons can walk
+
+[extra.investigations.detroit]
+display = "Cash for Kids 2: Detroit Charter Schools"
+short = "Detroit"
+status = "active"
+county = "Wayne"
+nodes = 87
+edges = 120
+lead = "Clutch Justice"
+evidence_site = "https://detroit.primals.eco"
+summary = "9-conviction felon running 2 charter schools. Sitting judge on his board. $4.9M in public money. 87 documented network nodes."
+
+[extra.investigations.saginaw]
+display = "Ghost Witness: Aljouny Fabrication"
+short = "Saginaw"
+status = "active"
+county = "Saginaw"
+nodes = 12
+edges = 18
+lead = "Clutch Justice"
+evidence_site = "https://barry.primals.eco"
+summary = "Attorney submitted fabricated witness. Court signed contempt against journalist who documented it. IC3 complaint filed. 13 convergence points."
+
+[extra.investigations.barry]
+display = "Barry County: The Disappeared Judge"
+short = "Barry"
+status = "tracking"
+county = "Barry"
+nodes = 8
+edges = 10
+lead = "Clutch Justice"
+evidence_site = "https://barry.primals.eco"
+summary = "Judge vanished from bench. 6-10x guideline sentencing. Active JTC investigation. Federal involvement confirmed."
+
+[extra.investigations.eastpointe]
+display = "38th District Court: Galen"
+short = "Eastpointe"
+status = "tracking"
+county = "Macomb"
+nodes = 4
+edges = 6
+lead = "Clutch Justice"
+summary = "JTC admonition. Jailed pregnant woman (reversed). Campaign staff = court staff. Nov 2026 election."
+
+# ── Evidence Nodes (primals.eco network) ──────────────────────────────
+[extra.network]
+nodes = ["detroit.primals.eco", "barry.primals.eco", "tuebor.primals.eco", "clutch.primals.eco"]
+description = "Cross-protection evidence network. SLAPP one — the others amplify."

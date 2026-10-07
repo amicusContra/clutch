@@ -1,0 +1,61 @@
+# clutch.primals.eco — Clutch Justice Investigation Platform
+
+> Collaborative investigation platform covering Michigan court accountability,
+> charter school fraud, and institutional capture. Every fact sourced to public records.
+
+## What This Site Is
+
+clutch.primals.eco is the collaborative investigation layer for the Clutch Justice
+network. It aggregates evidence from multiple investigation nodes (detroit.primals.eco,
+barry.primals.eco, tuebor.primals.eco) and presents them as a unified, walkable
+investigation graph.
+
+Visitors ("traveling salesmen") navigate the graph, discover connections between
+nodes, verify evidence, and help identify patterns across investigations.
+
+## Active Investigations
+
+1. DETROIT (Wayne County): Cash for Kids 2 — 87 nodes, 120+ edges, $4.9M public money
+   - Brian Roderick Banks (9 convictions, 6 felony) runs 2 charter schools
+   - Judge Cylenthia Miller chairs his school board
+   - Lisa Moreland (AAG) serves as vice chair
+   - Evidence: detroit.primals.eco (113+ pages)
+
+2. SAGINAW (Saginaw County): Ghost Witness — 13 convergence points
+   - Philip L. Ellison ($74K federal sanctions) submitted fabricated witness
+   - Court signed contempt against journalist who documented it
+   - IC3 complaint filed. COA appeal pending.
+   - Evidence: barry.primals.eco
+
+3. BARRY COUNTY: Disappeared Judge — Active JTC investigation
+   - Judge Michael Schipper: 6-10x guideline sentencing
+   - Prosecutor Julie Nakfoor Pratt: private ADB admonishment, Brady failures
+   - Federal involvement confirmed
+   - Evidence: barry.primals.eco
+
+4. EASTPOINTE (38th District): Judge Kathleen Galen
+   - JTC admonition. Jailed pregnant woman (reversed).
+   - Nov 2026 election: Galen vs. Goodman
+
+## Cross-Investigation Connections
+
+The Attorney Grievance Commission (94% dismissal rate), Judicial Tenure Commission,
+and SCAO appear as shared nodes across ALL investigations. The same enforcement
+failure pattern repeats in every county.
+
+## Evidence Network
+
+- detroit.primals.eco — Detroit charter school racketeering (113+ pages)
+- barry.primals.eco — Barry County, Saginaw, Ellison investigations (34+ pages)
+- tuebor.primals.eco — Statewide Michigan accountability
+- clutch.primals.eco — This site. Collaborative graph walker.
+- clutchjustice.com — Published investigative journalism
+
+## Contact
+
+hello@clutchjustice.com
+
+## License
+
+Investigation content: CC-BY-SA 4.0
+Court filings and public records: public domain where applicable

@@ -1,0 +1,259 @@
+{# SPDX-License-Identifier: CC-BY-SA-4.0 #}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <link rel="canonical" href="{{ current_url | default(value=config.base_url) | safe }}">
+  <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
+  <meta property="og:description" content="{% block og_desc %}{{ config.description }}{% endblock og_desc %}">
+  <meta property="og:type" content="{% block og_type %}website{% endblock og_type %}">
+  <meta property="og:url" content="{{ current_url | default(value=config.base_url) }}">
+  <meta property="og:site_name" content="Clutch Justice — Walk the Case">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="{% block keywords %}Clutch Justice, Michigan investigation, collaborative investigation, court accountability, Detroit charter school fraud, Brian Roderick Banks, Michigan judicial oversight, public records investigation, Walk the Case{% endblock keywords %}">
+  <link rel="describedby" href="{{ get_url(path='llms.txt') }}" type="text/plain" title="AI agent context">
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme');
+      if (t === 'light') document.documentElement.setAttribute('data-theme','light');
+      else document.documentElement.setAttribute('data-theme','dark');
+    })();
+  </script>
+  <link rel="stylesheet" href="{{ get_url(path='css/main.css') }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "{{ config.base_url | safe }}/#website",
+        "name": "{{ config.title }}",
+        "url": "{{ config.base_url | safe }}",
+        "description": "{{ config.description }}",
+        "author": {
+          "@type": "Organization",
+          "name": "Clutch Justice",
+          "url": "https://clutchjustice.com"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "{{ config.base_url | safe }}/#clutch-justice",
+        "name": "Clutch Justice",
+        "url": "https://clutchjustice.com",
+        "description": "Independent investigative journalism platform covering Michigan court accountability, charter school fraud, and institutional capture.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@clutchjustice.com",
+          "contactType": "editorial"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="{{ config.base_url }}" class="nav-brand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">Clutch Justice</span>
+        <span class="brand-sub">Walk the Case</span>
+      </a>
+      <div class="search-wrapper" id="search-wrapper">
+        <input type="search" id="search-input" placeholder="Search cases, actors, evidence…" autocomplete="off" aria-label="Search investigations">
+        <div class="search-results" id="search-results"></div>
+      </div>
+      <div class="nav-links" id="nav-links">
+        <a href="{{ get_url(path='@/graph/_index.md') }}" class="nav-link nav-walk">🗺️ Walk the Graph</a>
+        <div class="nav-group" data-group="cases">
+          <button class="nav-group-btn" aria-expanded="false" aria-haspopup="true">Cases <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg></button>
+          <div class="nav-dropdown" role="menu">
+            <a href="{{ get_url(path='@/cases/detroit/_index.md') }}" role="menuitem">
+              <strong>Detroit Charter Schools</strong>
+              <span>87 nodes · $4.9M · Active</span>
+            </a>
+            <a href="{{ get_url(path='@/cases/saginaw/_index.md') }}" role="menuitem">
+              <strong>Saginaw: Ghost Witness</strong>
+              <span>Fabricated witness · IC3 filed</span>
+            </a>
+            <a href="{{ get_url(path='@/cases/barry/_index.md') }}" role="menuitem">
+              <strong>Barry County</strong>
+              <span>Disappeared judge · Fed involvement</span>
+            </a>
+          </div>
+        </div>
+        <a href="{{ get_url(path='@/contribute/_index.md') }}" class="nav-link">Contribute</a>
+        <a href="{{ get_url(path='@/about/_index.md') }}" class="nav-link">About</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main" class="site-main">
+    {% block content %}{% endblock content %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-tagline"><strong>Every fact is sourced. Every connection is documented. Every visitor is an investigator.</strong></p>
+
+      <div class="footer-columns">
+        <div class="footer-col">
+          <strong class="footer-col-title">Investigations</strong>
+          <ul>
+            <li><a href="{{ get_url(path='@/cases/detroit/_index.md') }}">Detroit Charter Schools</a></li>
+            <li><a href="{{ get_url(path='@/cases/saginaw/_index.md') }}">Saginaw: Ghost Witness</a></li>
+            <li><a href="{{ get_url(path='@/cases/barry/_index.md') }}">Barry County Courts</a></li>
+            <li><a href="{{ get_url(path='@/graph/_index.md') }}">Graph Explorer</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong class="footer-col-title">Evidence Network</strong>
+          <ul>
+            <li><a href="https://detroit.primals.eco">detroit.primals.eco ↗</a></li>
+            <li><a href="https://barry.primals.eco">barry.primals.eco ↗</a></li>
+            <li><a href="https://tuebor.primals.eco">tuebor.primals.eco ↗</a></li>
+            <li><a href="https://clutchjustice.com">clutchjustice.com ↗</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <strong class="footer-col-title">About</strong>
+          <ul>
+            <li><a href="{{ get_url(path='@/about/_index.md') }}">About Clutch Justice</a></li>
+            <li><a href="{{ get_url(path='@/contribute/_index.md') }}">How to Contribute</a></li>
+            <li><a href="mailto:hello@clutchjustice.com">Contact</a></li>
+            <li><a href="{{ get_url(path='llms.txt') }}">llms.txt</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          Clutch Justice — Independent investigative journalism.
+          <br>No cookies. No tracking. No identifying data.
+        </p>
+        <p class="footer-license">
+          Investigation content: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.
+          Court filings and public records: public domain where applicable.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#1e3a5f',
+        primaryTextColor: '#e2e8f0',
+        primaryBorderColor: '#60a5fa',
+        lineColor: '#94a3b8',
+        secondaryColor: '#312e81',
+        tertiaryColor: '#1e1b4b',
+      },
+      flowchart: { curve: 'basis', padding: 12 },
+      securityLevel: 'loose'
+    });
+    async function renderMermaid() {
+      const els = document.querySelectorAll('pre.mermaid');
+      if (els.length === 0) return;
+      try { await mermaid.run({ nodes: els }); }
+      catch (e) { console.warn('Mermaid render error:', e); }
+    }
+    if (document.readyState === 'complete') renderMermaid();
+    else window.addEventListener('load', renderMermaid);
+  </script>
+  <script src="{{ get_url(path='js/graph-walker.js') }}"></script>
+  <script src="{{ get_url(path='elasticlunr.min.js') }}"></script>
+  <script src="{{ get_url(path='search_index.en.js') }}"></script>
+  <script>
+    (function() {
+      var searchInput = document.getElementById('search-input');
+      var searchResults = document.getElementById('search-results');
+      var idx = null;
+      if (searchInput && window.searchIndex) {
+        idx = elasticlunr.Index.load(window.searchIndex);
+        searchInput.addEventListener('input', function() {
+          var q = this.value.trim();
+          if (q.length < 2) { searchResults.innerHTML = ''; searchResults.style.display = 'none'; return; }
+          var results = idx.search(q, { fields: { title: {boost: 3}, body: {boost: 1}, description: {boost: 2} }, expand: true });
+          if (!results.length) { searchResults.innerHTML = '<div class="sr-empty">No results</div>'; searchResults.style.display = 'block'; return; }
+          var html = results.slice(0, 8).map(function(r) {
+            var doc = idx.documentStore.getDoc(r.ref);
+            return '<a class="sr-item" href="' + r.ref + '"><strong>' + (doc.title || 'Untitled') + '</strong><span>' + (doc.description || '').slice(0, 120) + '</span></a>';
+          }).join('');
+          searchResults.innerHTML = html;
+          searchResults.style.display = 'block';
+        });
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('#search-wrapper')) searchResults.style.display = 'none';
+        });
+      }
+
+      // Nav toggle
+      var toggle = document.querySelector('.nav-toggle');
+      var links = document.querySelector('.nav-links');
+      if (toggle && links) {
+        toggle.addEventListener('click', function() {
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          links.classList.toggle('open');
+        });
+      }
+
+      // Dropdown groups
+      var groups = document.querySelectorAll('.nav-group');
+      groups.forEach(function(group) {
+        var btn = group.querySelector('.nav-group-btn');
+        var dropdown = group.querySelector('.nav-dropdown');
+        if (!btn || !dropdown) return;
+        btn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var isOpen = group.classList.contains('open');
+          groups.forEach(function(g) { g.classList.remove('open'); });
+          if (!isOpen) group.classList.add('open');
+        });
+        group.addEventListener('mouseenter', function() {
+          if (window.innerWidth < 768) return;
+          groups.forEach(function(g) { g.classList.remove('open'); });
+          group.classList.add('open');
+        });
+        group.addEventListener('mouseleave', function() {
+          if (window.innerWidth < 768) return;
+          setTimeout(function() { group.classList.remove('open'); }, 150);
+        });
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.nav-group')) groups.forEach(function(g) { g.classList.remove('open'); });
+      });
+
+      // Theme toggle
+      var btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          var html = document.documentElement;
+          var current = html.getAttribute('data-theme');
+          var next = current === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', next);
+          localStorage.setItem('theme', next);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
