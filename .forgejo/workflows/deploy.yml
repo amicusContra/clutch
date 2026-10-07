@@ -1,0 +1,42 @@
+name: Build & Deploy clutch.primals.eco
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-deploy:
+    runs-on: docker
+    container:
+      image: ghcr.io/getzola/zola:v0.19.2
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build unified graph
+        run: |
+          # graph.json is committed to repo — skip python build in CI
+          # If you need live graph rebuilds, install python3 + run:
+          #   cd api && python3 build-unified-graph.py
+          echo "Using committed graph.json"
+
+      - name: Zola build
+        run: |
+          cd site
+          zola build
+          echo "Built $(find public -name '*.html' | wc -l) HTML pages"
+
+      - name: Deploy to live directory
+        run: |
+          rsync -av --delete site/public/ /srv/clutch/public/
+          echo "Deployed clutch.primals.eco"
+
+      - name: Generate BLAKE3 manifest
+        run: |
+          cd /srv/clutch/public
+          if command -v b3sum >/dev/null 2>&1; then
+            find . -type f | sort | xargs b3sum > /srv/clutch/content-manifest.b3
+            echo "BLAKE3 manifest: $(wc -l < /srv/clutch/content-manifest.b3) files hashed"
+          else
+            echo "b3sum not available — skipping manifest"
+          fi
