@@ -160,7 +160,23 @@ This pulls the latest from `publicRecord-detroit/site/static/graph.json` and `pu
 
 ## Evidence Network
 
-- [detroit.primals.eco](https://detroit.primals.eco) — 113+ pages, 91 nodes
-- [barry.primals.eco](https://barry.primals.eco) — 34+ pages
-- [tuebor.primals.eco](https://tuebor.primals.eco) — statewide shield
-- [clutchjustice.com](https://clutchjustice.com) — published journalism
+This is one node in the [primals.eco](https://primals.eco) investigation network:
+
+| Surface | URL | Description |
+|---------|-----|-------------|
+| **Clutch Justice** | [clutchjustice.com](https://clutchjustice.com) | Walkable investigation graph (this repo) |
+| **Tuebor** | [tuebor.primals.eco](https://tuebor.primals.eco) | Michigan court accountability |
+| **Barry** | [barry.primals.eco](https://barry.primals.eco) | Barry County mirror + desk workbench |
+| **Detroit** | [detroit.primals.eco](https://detroit.primals.eco) | Detroit public schools investigation |
+| **Thesis** | [thesis.primals.eco](https://thesis.primals.eco) | Live research — Stomachs With No Eyes |
+| **sporePrint** | [sporeprint.primals.eco](https://sporeprint.primals.eco) | Ecosystem documentation + philosophy |
+| **Signal** | [signal.primals.eco](https://signal.primals.eco) | Live behavioral topology monitor |
+| **Gorilla** | [gorilla.primals.eco](https://gorilla.primals.eco) | Real-time fleet observation |
+| **Source** | [git.primals.eco](https://git.primals.eco) | Sovereign Forgejo — AGPL source |
+
+### Repositories
+
+- **This repo:** [github.com/amicusContra/clutch](https://github.com/amicusContra/clutch) — 109 nodes, 157 edges
+- **Tuebor:** [github.com/amicusContra/tuebor](https://github.com/amicusContra/tuebor) — statewide investigation
+- **Detroit:** [github.com/defendDetroit/publicRecord](https://github.com/defendDetroit/publicRecord) — Detroit schools
+- **Full source:** [git.primals.eco/ecoPrimals](https://git.primals.eco/ecoPrimals) (AGPL-3.0-or-later)
