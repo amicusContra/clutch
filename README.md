@@ -180,3 +180,8 @@ This is one node in the [primals.eco](https://primals.eco) investigation network
 - **Tuebor:** [github.com/amicusContra/tuebor](https://github.com/amicusContra/tuebor) — statewide investigation
 - **Detroit:** [github.com/defendDetroit/publicRecord](https://github.com/defendDetroit/publicRecord) — Detroit schools
 - **Full source:** [git.primals.eco/ecoPrimals](https://git.primals.eco/ecoPrimals) (AGPL-3.0-or-later)
+
+---
+
+<p align="center"><i>hello world — Artisan</i></p>
+<p align="center"><sub><a href="https://sporeprint.primals.eco/philosophy/the-elements-of-style/">φ design system</a> · 55 repos · 6 orgs · 9 surfaces · <a href="https://primals.eco">primals.eco</a></sub></p>
