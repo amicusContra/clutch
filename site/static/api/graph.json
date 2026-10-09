@@ -897,7 +897,7 @@
       "tier": 3,
       "investigation": "saginaw",
       "url": "https://barry.primals.eco/evidence/foiaworks-honeypot/",
-      "detail": "FOIA platform run by fabricated-witness attorney. No privacy policy. Quagmire Solutions LLC."
+      "detail": "FOIA platform run by fabricated-witness attorney. No privacy policy (404 confirmed Oct 9 2026). GoDaddy shared hosting, cPanel admin exposed, SPF misconfigured, 3537 public bodies mapped, M365 tenant NETORGFT19358193. Quagmire Solutions LLC."
     },
     {
       "id": "quagmire",
