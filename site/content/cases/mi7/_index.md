@@ -3,9 +3,10 @@ title = "MI-7: Barrett vs. Lawrence — Signal Scan"
 description = "Initial signal classification for Michigan's 7th Congressional District. Tom Barrett (R-Charlotte) vs. Will Lawrence (D-Lansing). Cross-referenced with existing investigations."
 weight = 5
 
-[taxonomies]
+[extra]
 counties = ["Ingham", "Clinton", "Livingston", "Shiawassee", "Eaton"]
 status = ["scanning"]
+
 +++
 
 # MI-7 Signal Scan — Barrett vs. Lawrence

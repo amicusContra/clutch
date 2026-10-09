@@ -1,3 +1,4 @@
+@import url("phi.css");
 /* ── Clutch Justice — Walk the Case ─────────────────────────────── */
 /* Dark-first, minimal, investigation-grade UI */
 
@@ -38,7 +39,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--bg);
   color: var(--text);
-  line-height: 1.7;
+  line-height: var(--lh);
   font-size: 16px;
 }
 
